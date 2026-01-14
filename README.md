@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://antigravity-attachments.s3.amazonaws.com/33b65ff5-52a9-4a88-904b-db1ca75a164a/uploaded_image_0_1768354370158.png" width="100%" alt="ExoEngine Banner"/>
+  <img src="docs/images/banner.png" width="100%" alt="ExoEngine Banner"/>
   
   # ExoEngine™
   ### The Ultimate Destiny 2 Synergy Optimizer & Loadout Engine
