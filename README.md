@@ -47,12 +47,22 @@ One-click build application that goes deeper than standard loadout managers.
   <table width="100%">
     <tr>
       <td width="50%">
-        <img src="docs/images/vault_detail.png" alt="Vault Analysis"/>
-        <p align="center"><em>Deep Armor Scoring</em></p>
+        <img src="docs/images/optimizer_preview.png" alt="Synergy Optimizer"/>
+        <p align="center"><em>Synergy Optimizer</em></p>
       </td>
       <td width="50%">
-        <img src="docs/images/vault_summary.png" alt="Vault Summary"/>
-        <p align="center"><em>Inventory Intelligence</em></p>
+        <img src="docs/images/generator_preview.png" alt="Build Generator"/>
+        <p align="center"><em>Random Meta Generator</em></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <img src="docs/images/vault_summary.png" alt="Vault Guard Summary"/>
+        <p align="center"><em>Vault Guard Overview</em></p>
+      </td>
+      <td width="50%">
+        <img src="docs/images/vault_detail.png" alt="Vault Guard Detail"/>
+        <p align="center"><em>Detailed Armor Scoring</em></p>
       </td>
     </tr>
   </table>
