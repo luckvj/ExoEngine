@@ -47,11 +47,11 @@ One-click build application that goes deeper than standard loadout managers.
   <table width="100%">
     <tr>
       <td width="50%">
-        <img src="https://antigravity-attachments.s3.amazonaws.com/33b65ff5-52a9-4a88-904b-db1ca75a164a/uploaded_image_1_1768354370158.png" alt="Vault Analysis"/>
+        <img src="docs/images/vault_detail.png" alt="Vault Analysis"/>
         <p align="center"><em>Deep Armor Scoring</em></p>
       </td>
       <td width="50%">
-        <img src="https://antigravity-attachments.s3.amazonaws.com/33b65ff5-52a9-4a88-904b-db1ca75a164a/uploaded_image_2_1768354370158.png" alt="Vault Summary"/>
+        <img src="docs/images/vault_summary.png" alt="Vault Summary"/>
         <p align="center"><em>Inventory Intelligence</em></p>
       </td>
     </tr>
