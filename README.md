@@ -55,11 +55,6 @@ One-click build application that goes deeper than standard loadout managers.
         <p align="center"><em>Random Meta Generator</em></p>
       </td>
     </tr>
-    <tr>
-      <td width="50%">
-        <img src="docs/images/vault_summary.png" alt="Vault Guard Summary"/>
-        <p align="center"><em>Vault Guard Overview</em></p>
-      </td>
       <td width="50%">
         <img src="docs/images/vault_detail.png" alt="Vault Guard Detail"/>
         <p align="center"><em>Detailed Armor Scoring</em></p>
