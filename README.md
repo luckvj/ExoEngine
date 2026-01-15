@@ -23,10 +23,8 @@
 > **Developer Note:** I am currently developing this project on an aging PC that struggles with modern development workloads. If you enjoy ExoEngine and would like to support full-time development, donations are incredibly appreciated. 
 > 
 > **[Support Development via Ko-fi](https://ko-fi.com/unluckvj)**
-<<<<<<< HEAD
 =======
 > **[Donate via Ko-fi](https://ko-fi.com/unluckvj)**
->>>>>>> 389fa0b65a6b7db90163092fdfdb9b01d7b3c4f6
 
 ---
 
@@ -50,7 +48,7 @@ ExoEngine is fully integrated with the Destiny ecosystem.
 - **Deep DIM Support:** Import any DIM share link to view it in ExoEngine's immersive interface.
 - **One-Click Import:** Found a build you like? Click one button to open it in DIM and save it to your permanent collection.
 
-### 🛡️ Tactical Vault & One-Click Capture
+### 🛡️ Loadout Viewer & One-Click Capture
 - **Build Capture:** Use the "One-Click Capture" in the Loadout Viewer to snapshot your *entire* currently equipped build (Weapons, Armor, Subclass, and all 15+ Mods).
 - **Local Storage:** Save your favorite experimental builds to your local "Tactical Vault" (IndexedDB) without needing a central server.
 - **Progress Tracking:** Real-time feedback bars show you exactly what the API is doing during equipment swaps.
