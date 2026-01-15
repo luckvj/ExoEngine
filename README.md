@@ -22,12 +22,7 @@
 > [!IMPORTANT]
 > **Developer Note:** I am currently developing this project on an aging PC that struggles with modern development workloads. If you enjoy ExoEngine and would like to support full-time development, donations are incredibly appreciated. 
 > 
-<<<<<<< HEAD
 > **[Support Development via Ko-fi](https://ko-fi.com/unluckvj)**
-=======
-> **[Donate via Ko-fi](https://ko-fi.com/unluckvj)**
-
->>>>>>> 88fa698691eaec8da6ce3a07553bcb6bf5753ea6
 
 ---
 
