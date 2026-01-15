@@ -2,9 +2,9 @@
   <img src="docs/images/banner.png" width="100%" alt="ExoEngine Banner"/>
   
   # ExoEngine™
-  ### The Ultimate Destiny 2 Synergy Optimizer & Loadout Engine
+  ### Destiny 2 Synergy Optimizer & Random Meta Generator
   
-  [![Website](https://img.shields.io/badge/LIVE-exoengine.online-00f2ff?style=for-the-badge&logo=google-chrome&logoColor=white)](https://exoengine.online)
+  [![Website](https://img.shields.io/badge/LIVE-exoengine.online-ff8df6?style=for-the-badge&logo=google-chrome&logoColor=white)](https://exoengine.online)
   [![GitHub](https://img.shields.io/badge/REPO-luckvj%2FExoEngine-lightgrey?style=for-the-badge&logo=github)](https://github.com/luckvj/ExoEngine)
   [![Twitter](https://img.shields.io/badge/CONTACT-@Unluckvj-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/Unluckvj)
 </div>
@@ -13,31 +13,44 @@
 
 ## 🚀 Overview
 
-**ExoEngine™** is a high-performance web application designed to bridge the gap between casual play and meta-defining optimizations in Destiny 2. It provides a seamless, high-fidelity interface for generating, analyzing, and instantaneously equipping elite combat configurations.
+**ExoEngine™** is a specialized tool designed for **New Players** and **Chaos-Lovers**. 
 
-Built with a **Privacy-First** architecture, ExoEngine™ leverages the Bungie API to provide a "Zero-Storage" experience where your data stays on your machine and Bungie's servers.
+> **Disclaimer:** This is **NOT** a replacement for DIM (Destiny Item Manager). DIM is the gold standard for inventory management, and we love it. 
+
+**ExoEngine exists to fill a specific niche:**
+1.  **New Players:** Instantly understand *why* certain exotics and abilities work together through our Synergy Optimizer.
+2.  **Veterans:** Break out of the meta. Use our **Random Meta Generator** to force-equip random (but functional) loadouts for a fresh gameplay experience.
+
+---
+
+> [!IMPORTANT]
+> **Developer Note:** I am currently developing this project on an aging PC that struggles with modern development workloads. If you enjoy ExoEngine and would like to support full-time development (and help me upgrade to a machine that doesn't crash!), donations are incredibly appreciated. 
+> 
+> **[Donate via Ko-fi / PayPal](#)** *(Link pending)*
 
 ---
 
 ## ✨ Key Features
 
-### � Meta Generator & Chaos Mode
-Discover your next favorite build with our algorithmic generation engine.
-- **Meta-Sync**: Curated library of hundreds of endgame-ready synergies.
-- **Chaos Protocol**: AI-driven randomized permutations for experimental gameplay.
-- **Filter Suite**: Sort by Class, Element, or Expansion ownership.
+### 🔮 Synergy Optimizer
+For the Guardian who doesn't know what to run.
+- **Visual Synergies:** We interpret the game's complex interactions into simple cards.
+- **One-Click Equip:** See a build you like? Click "Equip" and we handle the Subclass wiring.
 
-### 🛡️ Vault Guard Analysis
-Stop the "is this good?" guesswork. Vault Guard scans your entire account to identify:
-- **God-Roll Detection**: Automatically flags 66+ stat rolls and double/triple spikes.
-- **Synergy Matching**: Specifically flags armor that enables your currently generated builds.
-- **Dismantle Advice**: Intelligent recommendations on what gear to keep or discard.
+### 🎰 Random Meta Generator
+For the Guardian who has everything but is bored of using it.
+- **Chaos Mode:** Spin the wheel to get a randomized Loadout (Exotic Armor + Exotic Weapon + Subclass).
+- **Smart Filtering:** Filter by Class or Element, but let the engine decide the rest.
 
-### ⚡ Instant Deployment
-One-click build application that goes deeper than standard loadout managers.
-- **Cross-Character Fetching**: Automatically pulls exotics from characters or the vault.
-- **Subclass Deep-Plugging**: Sets Super, Abilities, Aspects, and Fragments automatically.
-- **In-Game Slot Sync**: Save your configured setup directly to your character's loadout slots.
+### 🛡️ Vault Guard
+Stop deleting god-rolls.
+- **Armor Analysis:** Scans your vault for high-stat spikes (66+ total) and specific synergy enablers.
+- **Keep/Dismantle Advice:** Simple, color-coded recommendations for your gear.
+
+### 📚 Tactical Vault (Saved Builds)
+Save your chaos.
+- **Snapshot:** Save your generated builds to a local "Tactical Vault".
+- **Quick Swap:** Re-equip your favorite random rolls instantly.
 
 ---
 
@@ -48,70 +61,74 @@ One-click build application that goes deeper than standard loadout managers.
     <tr>
       <td width="50%">
         <img src="docs/images/optimizer_preview.png" alt="Synergy Optimizer"/>
-        <p align="center"><em>Synergy Optimizer</em></p>
+        <p align="center"><em>Synergy Optimizer Cards</em></p>
       </td>
       <td width="50%">
         <img src="docs/images/generator_preview.png" alt="Build Generator"/>
-        <p align="center"><em>Random Meta Generator</em></p>
+        <p align="center"><em>Random Meta Generator UI</em></p>
       </td>
     </tr>
     <tr>
       <td width="50%">
-        <img src="docs/images/vault_summary.png" alt="Vault Guard Summary"/>
-        <p align="center"><em>Vault Guard Overview</em></p>
+        <img src="docs/images/vault_detail.png" alt="Vault Analysis"/>
+        <p align="center"><em>Vault Guard Analysis</em></p>
       </td>
       <td width="50%">
-        <img src="docs/images/vault_detail.png" alt="Vault Guard Detail"/>
-        <p align="center"><em>Detailed Armor Scoring</em></p>
+        <img src="docs/images/saved_builds.png" alt="Saved Builds"/>
+        <p align="center"><em>Tactical Vault</em></p>
       </td>
     </tr>
   </table>
+  <img src="docs/images/demo_preview.png" alt="Live Demo"/>
+  <p align="center"><em>Seamless Integration with Destiny 2</em></p>
 </div>
 
 ---
 
 ## 🧠 Engineering & Technical Challenges
 
-ExoEngine™ implements several custom solutions to overcome technical hurdles in the Destiny 2 API:
+ExoEngine™ implements unique solutions to solve specific Destiny 2 API hurdles:
 
 ### 1. The Dynamic Fragment Slot Conflict
-When applying Aspects, the API doesn't instantly realize new Fragment slots are available. 
-- **The Solution**: A multi-threaded pass system. **Pass 1** seats the Aspects; the engine then enters a 1.2s "Wait-state" before **Pass 2** re-verifies the live socket layout and seats Fragments.
+When applying Aspects via the API, the server doesn't instantly "unlock" the corresponding Fragment slots.
+- **Solution:** A multi-stage "Heartbeat" system. The engine applies Aspects, waits for a socket-update verification pulse (approx 1.2s), and *then* seats the Fragments in a secondary pass.
 
-### 2. Heuristic Item Resolver
-Exotics are frequently reissued with new IDs. 
-- **The Solution**: A string-based fuzzy matcher fallback. If an exact hash isn't found, the engine scans your account for any item sharing the same name, ensuring 100% discovery regardless of when you earned the item.
+### 2. Prismatic Class Handling
+Prismatic introduces complex "Any Class" logic for grenades and melees.
+- **Solution:** A custom `PrismaticResolver` that maps ability hashes across class boundaries, ensuring that a Warlock's Prismatic grenade is correctly identified even if it originated from a different subclass element.
 
-### 3. Community Gold Standard
-Inspired by the exceptional standards of **DIM (Destiny Item Manager)**, we've implemented high-reliability write-actions using the `InsertSocketPlugFree` endpoint, ensuring that ExoEngine™ is as robust as the best tools in the ecosystem.
+### 3. Heuristic Item Resolver
+Exotics are frequently reissued with new Item Hashes.
+- **Solution:** A fuzzy-matching fallback system. If the precise API hash for "Sunbracers" is missing, the engine scans the user's inventory for *any* item matching the name and perk set, ensuring older versions of exotics still work.
 
 ---
 
 ## 🛠️ Built With
 
-- **Framework**: React 18 + Vite (for blistering fast HMR)
-- **Language**: TypeScript (Type-safe Bungie API interactions)
-- **State**: Zustand (Atomic state management)
-- **Storage**: IndexedDB (Client-side localized persistence)
-- **Logic**: Custom-built Synergy Weights & Inventory Scanning Heuristics
+- **Framework:** React 18 + Vite
+- **Language:** TypeScript
+- **State:** Zustand
+- **Storage:** IndexedDB (Local Privacy)
+- **Styling:** Custom CSS Variables (Prismatic Theme)
 
 ---
 
-## 📖 Getting Started
+## � Known Issues
 
-1. **Connect**: Link your Bungie account via OAuth.
-2. **Select**: Choose your Guardian in the header.
-3. **Roll**: Use the **Generator** to discover a build.
-4. **Deploy**: Hit **Equip** and let the engine handle the transfers and node-plugging.
-5. **Save**: Click **Snapshot** to sync to your in-game slots.
+- **Fragment Plugs:** Occasionally, the API may reject a fragment plug if the socket index shifts during an update. A second "Equip" click usually resolves this.
+- **Load Times:** First-time manifest downloads can take a moment depending on Bungie's server load.
 
 ---
 
-## 📬 Contact
+## 📬 Credits & Contact
 
-Developed by **Vj (@Unluckvj)**.
+**Lead Developer:**
+- **Vince (Vj) - [@Unluckvj](https://twitter.com/Unluckvj)**
 
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://twitter.com/Unluckvj)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/luckvj)
+**Special Thanks:**
+- **Bungie API Team:** For providing the incredible platform that makes this possible.
+- **Destiny Item Manager (DIM):** For setting the standard and inspiring this project.
+- **Destiny 2 Community:** For the endless buildcrafting creativity.
 
-**Made for the Destiny 2 Community.**
+---
+**Made with ❤️ for the Guardian Games.**
