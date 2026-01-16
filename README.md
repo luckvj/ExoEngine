@@ -105,7 +105,7 @@ Sharing massive loadout configurations without a database backend.
 ## 📬 Credits & Contact
 
 **Lead Developer:**
-- **Vince (Vj) - [@Unluckvj](https://twitter.com/Unluckvj)**
+- **(Vj) - [@Unluckvj](https://twitter.com/Unluckvj)**
 
 **Special Thanks:**
 - **Bungie API Team:** For providing the incredible platform and documentation.
