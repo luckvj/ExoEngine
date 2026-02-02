@@ -142,47 +142,6 @@ API:          Bungie.net + DIM Mappings
 
 ---
 
-## Quick Start
-
-### Prerequisites
-- Node.js 18+ 
-- Bungie.net Developer Application ([Create one here](https://www.bungie.net/en/Application))
-- Your app must be **Confidential OAuth** (not Public) for refresh tokens
-
-### Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/luckvj/ExoEngine.git
-cd ExoEngine
-```
-
-2. **Install dependencies**
-```bash
-npm install
-```
-
-3. **Configure environment**
-Create a `.env` file:
-```env
-VITE_BUNGIE_API_KEY=your_api_key
-VITE_BUNGIE_CLIENT_ID=your_client_id
-VITE_BUNGIE_CLIENT_SECRET=your_client_secret
-```
-
-4. **Start development server**
-```bash
-npm run dev
-```
-
-5. **Build for production**
-```bash
-npm run build
-# Output â†’ /web folder (ready to deploy)
-```
-
----
-
 ## Usage Guide
 
 ### First Time Setup
@@ -217,22 +176,6 @@ npm run build
 - **Error 1663:** Subclass changes only work in Orbit/Social spaces (Bungie API restriction)
 - **Error 1676:** Some mod combinations fail due to energy cost limits
 - **Mobile Performance:** Galaxy may lag on older mobile devices (optimization ongoing)
-
----
-
-## Contributing
-
-ExoEngine is open source! Contributions are welcome:
-
-- **Bug Reports:** [Open an issue](https://github.com/luckvj/ExoEngine/issues)
-- **Feature Requests:** [Start a discussion](https://github.com/luckvj/ExoEngine/discussions)
-- **Pull Requests:** Fork, branch, and submit!
-
-### Development Priorities
-- [ ] Mobile performance optimization
-- [ ] Weapon synergy mapping
-- [ ] Seasonal artifact integration
-- [ ] Community build sharing hub
 
 ---
 
