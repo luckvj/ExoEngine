@@ -162,8 +162,8 @@ export function CharacterSelectPage() {
 
             <div className="traveler-backdrop-container">
                 <img ref={travelerRef} src={travelerSphere} className="traveler-sphere" alt="" />
-                {/* Only show logo when authenticated (character selection screen) */}
-                {isAuthenticated && (
+                {/* Only show logo on login screen, hide when selecting characters */}
+                {!isAuthenticated && (
                     <div 
                         className="brand-logo-beside-traveler" 
                         onClick={(e) => {
