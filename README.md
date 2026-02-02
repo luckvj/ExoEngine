@@ -1,118 +1,290 @@
 <div align="center">
-  <img src="docs/images/banner.png" width="100%" alt="ExoEngine Banner"/>
+  <img src="docs/images/logo.svg" width="300px" alt="ExoEngine Logo"/>
   
   # ExoEngine™
-  ### Destiny 2 Synergy Optimizer & Random Meta Generator
+  ### The Universe of Build Synergies - Visualized
   
-  [![Website](https://img.shields.io/badge/LIVE-exoengine.online-ff8df6?style=for-the-badge&logo=google-chrome&logoColor=white)](https://exoengine.online)
-  [![GitHub](https://img.shields.io/badge/REPO-luckvj%2FExoEngine-lightgrey?style=for-the-badge&logo=github)](https://github.com/luckvj/ExoEngine)
-  [![Twitter](https://img.shields.io/badge/CONTACT-@Unluckvj-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/Unluckvj)
+  **Destiny 2's First Interactive 3D Synergy Explorer**
+  
+  [![🌐 Live Site](https://img.shields.io/badge/🌐_LIVE-exoengine.online-8b5cf6?style=for-the-badge)](https://exoengine.online)
+  [![⚡ Status](https://img.shields.io/badge/⚡_STATUS-Production-10b981?style=for-the-badge)](https://exoengine.online)
+  [![🐦 Twitter](https://img.shields.io/badge/🐦_CONTACT-@Unluckvj-1DA1F2?style=for-the-badge)](https://twitter.com/Unluckvj)
+  
+  ---
+  
+  <img src="docs/images/demo.gif" width="800px" alt="ExoEngine Demo"/>
 </div>
 
----
+<br/>
 
-## 🚀 Overview
+## 🌌 What is ExoEngine?
 
-**ExoEngine™** is a specialized tool designed specifically for **New Players** and **Chaos-Lovers**. While the Destiny community has incredible inventory managers, we built ExoEngine to solve the "What do I even run?" problem through visual synergy analysis and randomized buildcrafting.
+**ExoEngine** is a next-generation Destiny 2 build discovery tool that transforms the overwhelming question *"What should I run?"* into an immersive visual experience. Instead of spreadsheets and lists, you explore a **3D galaxy of synergies** where every exotic, subclass, and mod is interconnected.
 
-> **Disclaimer:** This is **NOT** a replacement for DIM (Destiny Item Manager). DIM is the gold standard for inventory management. ExoEngine is a companion tool focused on build discovery and experiment-driven gameplay.
+### 🎯 Built For:
+- 🆕 **New Players** - Visual learning without the wiki rabbit hole
+- 🎲 **Chaos Lovers** - Randomized meta builds for experienced Guardians
+- 🔬 **Theorycrafters** - Deep synergy analysis with one-click equipping
+- 🎨 **Build Collectors** - Save and share your discoveries
 
----
-
-> [!IMPORTANT]
-> **Developer Note:** I am currently developing this project on an aging PC that struggles with modern development workloads. If you enjoy ExoEngine and would like to support full-time development, donations are incredibly appreciated. 
-> 
-> **[Support Development via Ko-fi](https://ko-fi.com/unluckvj)**
-<<<<<<< HEAD
-=======
-> **[Donate via Ko-fi](https://ko-fi.com/unluckvj)**
->>>>>>> 389fa0b65a6b7db90163092fdfdb9b01d7b3c4f6
+> **Note:** ExoEngine is a **companion tool** to DIM (Destiny Item Manager), not a replacement. DIM remains the gold standard for inventory management. We focus on **build discovery and visual storytelling**.
 
 ---
 
-## ✨ Key Features
+## ✨ Core Features
 
-### 🎰 Random Meta Generator (Chaos Mode)
-For the Guardian who has everything but is bored of using it.
-- **Chaos Engine:** Spin the wheel to get a randomized but functional Loadout (Exotic Armor + Exotic Weapon + Subclass).
-- **Recommended Mods:** Every meta build now includes a curated set of **Recommended Armor Mods** (Siphons, Surges, Reaper) displayed directly in the UI.
-- **Smart Filtering:** Filter by Class or Element while keeping the "chaos" of random item selection.
+### 🌌 **Synergy Galaxy** - The Heart of ExoEngine
 
-### � Synergy Optimizer
-For the Guardian who doesn't know what to run.
-- **Interaction Mapping:** We interpret complex API data into simple, beautiful "Synergy Cards".
-- **Visual Learning:** New players can see exactly *why* a certain Exotic Armor interacts with a specific Subclass Aspect.
-- **Auto-Config:** Pick a synergy, and the engine automatically configures your Fragments and Abilities to match.
+The **Synergy Galaxy** is a fully interactive 3D visualization where every piece of gear in your vault becomes a node in space. Connections represent synergies, and you can:
 
-### 🔗 DIM Compatibility & Universal Sharing
-ExoEngine is fully integrated with the Destiny ecosystem.
-- **Universal Links:** Generate links that can be opened directly in ExoEngine OR DIM.
-- **Deep DIM Support:** Import any DIM share link to view it in ExoEngine's immersive interface.
-- **One-Click Import:** Found a build you like? Click one button to open it in DIM and save it to your permanent collection.
+- 🔍 **Zoom & Navigate** - Fly through your entire arsenal in real-time
+- 🎯 **Click to Equip** - One click transfers and equips items across characters
+- 🕸️ **See Relationships** - Visual wires connect synergistic exotics, aspects, and fragments
+- 🎨 **Color-Coded Elements** - Solar, Void, Arc, Stasis, Strand at a glance
+- 🔄 **Live Inventory** - Real-time sync with Bungie's API
+- 📱 **Mobile Optimized** - Touch controls for tablet gameplay
 
-### 🛡️ Tactical Vault & One-Click Capture
-- **Build Capture:** Use the "One-Click Capture" in the Loadout Viewer to snapshot your *entire* currently equipped build (Weapons, Armor, Subclass, and all 15+ Mods).
-- **Local Storage:** Save your favorite experimental builds to your local "Tactical Vault" (IndexedDB) without needing a central server.
-- **Progress Tracking:** Real-time feedback bars show you exactly what the API is doing during equipment swaps.
-
----
-
-## 🧠 Engineering & Technical Challenges
-
-ExoEngine™ implements unique solutions to solve specific Destiny 2 API hurdles:
-
-### 1. The Dynamic Fragment Slot Conflict
-When applying Aspects via the API, the server doesn't instantly "unlock" the corresponding Fragment slots.
-- **Solution:** A multi-stage **"Heartbeat Pass"** system. The engine applies Aspects, waits for a socket-update verification pulse (approx 1.2s), and *then* seats the Fragments in a secondary pass once the server acknowledges the new slots.
-
-### 2. Manifest Optimization (Client-Side Worker)
-The Destiny 2 Manifest is over 100MB. Loading this on mobile data or slow connections is prohibitive.
-- **Solution:** We implemented a custom **Trimming Worker** that discards 90% of unneeded manifest metadata (lore, non-English strings, raw logic) *before* caching it to IndexedDB. This results in a lightning-fast <10MB final startup load.
-
-### 3. Serverless Link Encoding
-Sharing massive loadout configurations without a database backend.
-- **Solution:** A URL-safe Base64 compression scheme that packs the entire `LoadoutShareData` structure into the URL. This ensures your links never expire and require zero server storage.
-
----
-
----
-
-## 🎬 Demonstration
+**How it works:**
+1. Your entire vault loads as a 3D constellation
+2. Equipped items are highlighted with glowing rings
+3. Click any exotic to see its synergies light up
+4. Click a synergy to auto-equip the full build
+5. Drag to rotate, scroll to zoom, double-tap to focus
 
 <div align="center">
-  <img src="docs/images/demo.gif" width="100%" alt="ExoEngine Feature Demonstration"/>
-  <p align="center"><em>ExoEngine™ Core Workflow: Discover, Capture, and Share</em></p>
+  <img src="docs/images/optimizer_preview.png" width="700px" alt="Synergy Galaxy"/>
+  <p><em>Your vault, visualized as an explorable universe</em></p>
 </div>
 
 ---
 
-## 🛠️ Built With
+### 🎰 **Chaos Generator** - Random Meta Builds
 
-- **Framework:** React 19 + Vite 7
-- **Language:** TypeScript (Strict Type Safety)
-- **State:** Zustand
-- **Storage:** IndexedDB (Local Privacy)
-- **Styling:** Custom Vanilla CSS (Glassmorphism & Prismatic Theme)
-- **API:** Bungie.net API + DIM Value Mappings
+Tired of running the same loadout? Spin the wheel and get a **fully functional random build** complete with:
+
+- ✅ Exotic Armor + Exotic Weapon matched to your subclass
+- ✅ Auto-configured Aspects & Fragments
+- ✅ Recommended Armor Mods (Siphons, Surges, Reloaders)
+- ✅ Smart filtering by Class and Element
+- ✅ One-click equip from the Generator
+
+Perfect for:
+- Breaking out of meta comfort zones
+- Discovering forgotten exotics in your vault
+- Content creator challenges
+- Late-night Guardian shenanigans
+
+<div align="center">
+  <img src="docs/images/generator_preview.png" width="700px" alt="Chaos Generator"/>
+</div>
 
 ---
 
-## 🐛 Known Issues & Roadmap
+### 🛡️ **Tactical Vault** - Build Management
 
-- **API Latency:** Occasionally, the Bungie API may take a moment to reflect subclass changes. If a fragment fails to seat, clicking "Equip" again usually resolves the sync issue.
-- **PWA Support:** Full offline manifest support is currently in development.
+Save your favorite discoveries to your **private local vault**:
+
+- 💾 **Local-First Storage** - No servers, your builds stay on your device
+- 📸 **One-Click Capture** - Snapshot your *entire* loadout (15+ mods included)
+- 🏷️ **Smart Tagging** - Auto-categorized by class, element, and exotic
+- 🔗 **Universal Sharing** - Generate links that work in ExoEngine AND DIM
+- 📊 **Build Analytics** - See your most-used exotics and playstyles
+
+<div align="center">
+  <img src="docs/images/saved_builds.png" width="700px" alt="Tactical Vault"/>
+</div>
+
+---
+
+### 🔗 **DIM Integration** - Universal Compatibility
+
+ExoEngine plays nice with the Destiny ecosystem:
+
+- 🔄 **Import DIM Links** - Paste any `dim.gg` share link to visualize it in 3D
+- 📤 **Export to DIM** - Generate DIM-compatible links from your builds
+- 🌐 **Universal Sharing** - Share links that work in both ExoEngine and DIM
+- 📋 **Deep Loadout Support** - Full mod, aspect, and fragment preservation
+
+---
+
+## 🧠 Under the Hood
+
+ExoEngine is built with DIM-grade engineering for Destiny 2 API challenges:
+
+### 🎯 **Smart Inventory Management**
+- **Multi-Character Transfers** - Automatically routes items through vault when needed
+- **Proactive Space Checks** - Prevents transfer failures before they happen
+- **Exotic Conflict Resolution** - Intelligently swaps exotics without breaking your loadout
+- **Optimistic UI Updates** - Instant feedback with API validation
+
+### 🔐 **Security & Privacy**
+- **Local-First Architecture** - Your vault data stays on your device
+- **Encrypted Token Storage** - AES-GCM encryption for OAuth tokens
+- **No Analytics Tracking** - Your builds are yours alone
+- **Open Source** - Audit the code yourself
+
+### ⚡ **Performance Optimizations**
+- **Manifest Trimming** - 90% smaller manifest cache (<10MB vs 100MB+)
+- **Code Splitting** - 23 optimized chunks for fast initial load
+- **Timestamp Protection** - Rejects stale API responses automatically
+- **Dynamic Fragment Slots** - Handles Aspect→Fragment dependencies gracefully
+
+### 🔧 **Tech Stack**
+```
+Frontend:     React 19 + TypeScript
+Build Tool:   Vite 7
+State:        Zustand (5KB)
+Storage:      IndexedDB + Encryption
+Styling:      Custom CSS (Glassmorphism + Prismatic)
+3D Engine:    Custom Canvas Renderer
+API:          Bungie.net + DIM Mappings
+```
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- Bungie.net Developer Application ([Create one here](https://www.bungie.net/en/Application))
+- Your app must be **Confidential OAuth** (not Public) for refresh tokens
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/luckvj/ExoEngine.git
+cd ExoEngine
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Configure environment**
+Create a `.env` file:
+```env
+VITE_BUNGIE_API_KEY=your_api_key
+VITE_BUNGIE_CLIENT_ID=your_client_id
+VITE_BUNGIE_CLIENT_SECRET=your_client_secret
+```
+
+4. **Start development server**
+```bash
+npm run dev
+```
+
+5. **Build for production**
+```bash
+npm run build
+# Output → /web folder (ready to deploy)
+```
+
+---
+
+## 📖 Usage Guide
+
+### First Time Setup
+1. Visit https://exoengine.online (or your deployed instance)
+2. Click "Connect to Bungie.net" and authorize
+3. Wait for your vault to sync (~5-10 seconds)
+4. You're in! Your entire arsenal is now a 3D galaxy
+
+### Navigating the Galaxy
+- **Mouse:** Drag to rotate, scroll to zoom
+- **Touch:** Swipe to rotate, pinch to zoom
+- **Click Node:** See item details and synergies
+- **Double-Click:** Auto-equip the item
+- **ESC:** Reset camera view
+
+### Equipping a Synergy Build
+1. Click any exotic armor in the galaxy
+2. View the synergy sidebar on the right
+3. Click a synergy card
+4. ExoEngine auto-equips: Exotic + Subclass + Aspects + Fragments + Mods
+
+### Saving a Build
+1. Equip your desired loadout
+2. Go to "Tactical Vault" tab
+3. Click "Capture Current Loadout"
+4. Name it and save!
+
+---
+
+## 🐛 Known Limitations
+
+- **Error 1663:** Subclass changes only work in Orbit/Social spaces (Bungie API restriction)
+- **Error 1676:** Some mod combinations fail due to energy cost limits
+- **Mobile Performance:** Galaxy may lag on older mobile devices (optimization ongoing)
+
+---
+
+## 🤝 Contributing
+
+ExoEngine is open source! Contributions are welcome:
+
+- 🐛 **Bug Reports:** [Open an issue](https://github.com/luckvj/ExoEngine/issues)
+- ✨ **Feature Requests:** [Start a discussion](https://github.com/luckvj/ExoEngine/discussions)
+- 🔧 **Pull Requests:** Fork, branch, and submit!
+
+### Development Priorities
+- [ ] Mobile performance optimization
+- [ ] Weapon synergy mapping
+- [ ] Seasonal artifact integration
+- [ ] Community build sharing hub
+
+---
+
+## 💖 Support Development
+
+> [!IMPORTANT]
+> ExoEngine is developed solo on an aging PC. If this tool enhances your Guardian experience, consider supporting continued development!
+
+**Ways to Support:**
+- ☕ **[Buy me a Ko-fi](https://ko-fi.com/unluckvj)**
+- ⭐ **Star this repo** on GitHub
+- 🐦 **Share** on Twitter with #ExoEngine
+- 🎮 **Use it** and provide feedback!
+
+Every contribution helps maintain servers and fund new features.
 
 ---
 
 ## 📬 Credits & Contact
 
-**Lead Developer:**
-- **Vince (Vj) - [@Unluckvj](https://twitter.com/Unluckvj)**
+**Created by:** Vince (Vj)  
+**Twitter:** [@Unluckvj](https://twitter.com/Unluckvj)  
+**Website:** [exoengine.online](https://exoengine.online)  
+**GitHub:** [luckvj/ExoEngine](https://github.com/luckvj/ExoEngine)
 
-**Special Thanks:**
-- **Bungie API Team:** For providing the incredible platform and documentation.
-- **Destiny Item Manager (DIM):** For setting the standard and providing open-source mappings.
-- **Destiny 2 Community:** For 10 years of incredible buildcrafting history.
+### Special Thanks
+- **Bungie** - For the incredible API and 10 years of Destiny
+- **DIM Team** - For setting the standard and open-source inspiration
+- **Destiny Community** - For endless buildcrafting creativity
+- **Early Testers** - You know who you are 💙
 
 ---
-**Made with ❤️ for the Guardian Games.**
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+### Legal Disclaimer
+ExoEngine is a fan-made tool and is not affiliated with, endorsed by, or associated with Bungie, Inc. or Destiny 2. All Destiny 2 assets, names, and trademarks are property of Bungie, Inc.
+
+---
+
+<div align="center">
+  
+### 🌌 Explore. Discover. Dominate.
+
+**Made with ❤️ for Guardians, by Guardians**
+
+[🚀 Launch ExoEngine](https://exoengine.online) | [📖 Documentation](https://github.com/luckvj/ExoEngine/wiki) | [💬 Discord](#)
+
+---
+
+*"Eyes up, Guardian. Your next build awaits in the stars."*
+
+</div>

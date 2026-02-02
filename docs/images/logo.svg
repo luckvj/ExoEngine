@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Favicon Optimized: Larger, space-filling, and vibrant -->
+  <defs>
+    <linearGradient id="arcGradient" x1="256" y1="20" x2="256" y2="492" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00EEFF" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#00EEFF" />
+    </linearGradient>
+  </defs>
+  <g>
+    <!-- Left Pillar (Scaled larger for visibility) -->
+    <path d="M60 492V270L110 220V20H246V492H60Z" fill="url(#arcGradient)"/>
+    <!-- Right Pillar (Mirrored) -->
+    <path d="M452 492V270L402 220V20H266V492H452Z" fill="url(#arcGradient)"/>
+  </g>
+</svg>
