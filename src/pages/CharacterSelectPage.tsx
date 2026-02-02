@@ -162,24 +162,7 @@ export function CharacterSelectPage() {
 
             <div className="traveler-backdrop-container">
                 <img ref={travelerRef} src={travelerSphere} className="traveler-sphere" alt="" />
-                <div 
-                    className="brand-logo-beside-traveler" 
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        navigate('/credits');
-                    }} 
-                    style={{ cursor: 'pointer' }}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            navigate('/credits');
-                        }
-                    }}
-                >
-                    <img src="/logo_favicon.svg" alt="ExoEngine" className="brand-logo-traveler" />
-                </div>
+                {/* Logo removed for cleaner character select experience */}
                 <div className="guardian-silhouette-layer">
                     <img src={warlockFull} className={`guardian-full warlock ${hoveredClassType === GuardianClass.Warlock ? 'visible' : ''}`} alt="" />
                     <img src={titanFull} className={`guardian-full titan ${hoveredClassType === GuardianClass.Titan ? 'visible' : ''}`} alt="" />
