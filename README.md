@@ -6,9 +6,9 @@
   
   **Destiny 2's First Interactive 3D Synergy Explorer**
   
-  [![🌐 Live Site](https://img.shields.io/badge/🌐_LIVE-exoengine.online-8b5cf6?style=for-the-badge)](https://exoengine.online)
-  [![⚡ Status](https://img.shields.io/badge/⚡_STATUS-Production-10b981?style=for-the-badge)](https://exoengine.online)
-  [![🐦 Twitter](https://img.shields.io/badge/🐦_CONTACT-@Unluckvj-1DA1F2?style=for-the-badge)](https://twitter.com/Unluckvj)
+  [![Live Site](https://img.shields.io/badge/LIVE-exoengine.online-8b5cf6?style=for-the-badge)](https://exoengine.online)
+  [![Status](https://img.shields.io/badge/STATUS-Production-10b981?style=for-the-badge)](https://exoengine.online)
+  [![Twitter](https://img.shields.io/badge/TWITTER-@Unluckvj-1DA1F2?style=for-the-badge)](https://twitter.com/Unluckvj)
   
   ---
   
@@ -17,32 +17,32 @@
 
 <br/>
 
-## 🌌 What is ExoEngine?
+## What is ExoEngine?
 
 **ExoEngine** is a next-generation Destiny 2 build discovery tool that transforms the overwhelming question *"What should I run?"* into an immersive visual experience. Instead of spreadsheets and lists, you explore a **3D galaxy of synergies** where every exotic, subclass, and mod is interconnected.
 
-### 🎯 Built For:
-- 🆕 **New Players** - Visual learning without the wiki rabbit hole
-- 🎲 **Chaos Lovers** - Randomized meta builds for experienced Guardians
-- 🔬 **Theorycrafters** - Deep synergy analysis with one-click equipping
-- 🎨 **Build Collectors** - Save and share your discoveries
+### Built For:
+- **New Players** - Visual learning without the wiki rabbit hole
+- **Chaos Lovers** - Randomized meta builds for experienced Guardians
+- **Theorycrafters** - Deep synergy analysis with one-click equipping
+- **Build Collectors** - Save and share your discoveries
 
 > **Note:** ExoEngine is a **companion tool** to DIM (Destiny Item Manager), not a replacement. DIM remains the gold standard for inventory management. We focus on **build discovery and visual storytelling**.
 
 ---
 
-## ✨ Core Features
+## Core Features
 
-### 🌌 **Synergy Galaxy** - The Heart of ExoEngine
+### **Synergy Galaxy** - The Heart of ExoEngine
 
 The **Synergy Galaxy** is a fully interactive 3D visualization where every piece of gear in your vault becomes a node in space. Connections represent synergies, and you can:
 
-- 🔍 **Zoom & Navigate** - Fly through your entire arsenal in real-time
-- 🎯 **Click to Equip** - One click transfers and equips items across characters
-- 🕸️ **See Relationships** - Visual wires connect synergistic exotics, aspects, and fragments
-- 🎨 **Color-Coded Elements** - Solar, Void, Arc, Stasis, Strand at a glance
-- 🔄 **Live Inventory** - Real-time sync with Bungie's API
-- 📱 **Mobile Optimized** - Touch controls for tablet gameplay
+- **Zoom & Navigate** - Fly through your entire arsenal in real-time
+- **Click to Equip** - One click transfers and equips items across characters
+- **See Relationships** - Visual wires connect synergistic exotics, aspects, and fragments
+- **Color-Coded Elements** - Solar, Void, Arc, Stasis, Strand at a glance
+- **Live Inventory** - Real-time sync with Bungie's API
+- **Mobile Optimized** - Touch controls for tablet gameplay
 
 **How it works:**
 1. Your entire vault loads as a 3D constellation
@@ -58,15 +58,15 @@ The **Synergy Galaxy** is a fully interactive 3D visualization where every piece
 
 ---
 
-### 🎰 **Chaos Generator** - Random Meta Builds
+### **Chaos Generator** - Random Meta Builds
 
 Tired of running the same loadout? Spin the wheel and get a **fully functional random build** complete with:
 
-- ✅ Exotic Armor + Exotic Weapon matched to your subclass
-- ✅ Auto-configured Aspects & Fragments
-- ✅ Recommended Armor Mods (Siphons, Surges, Reloaders)
-- ✅ Smart filtering by Class and Element
-- ✅ One-click equip from the Generator
+- Exotic Armor + Exotic Weapon matched to your subclass
+- Auto-configured Aspects & Fragments
+- Recommended Armor Mods (Siphons, Surges, Reloaders)
+- Smart filtering by Class and Element
+- One-click equip from the Generator
 
 Perfect for:
 - Breaking out of meta comfort zones
@@ -80,15 +80,15 @@ Perfect for:
 
 ---
 
-### 🛡️ **Tactical Vault** - Build Management
+### **Tactical Vault** - Build Management
 
 Save your favorite discoveries to your **private local vault**:
 
-- 💾 **Local-First Storage** - No servers, your builds stay on your device
-- 📸 **One-Click Capture** - Snapshot your *entire* loadout (15+ mods included)
-- 🏷️ **Smart Tagging** - Auto-categorized by class, element, and exotic
-- 🔗 **Universal Sharing** - Generate links that work in ExoEngine AND DIM
-- 📊 **Build Analytics** - See your most-used exotics and playstyles
+- **Local-First Storage** - No servers, your builds stay on your device
+- **One-Click Capture** - Snapshot your *entire* loadout (15+ mods included)
+- **Smart Tagging** - Auto-categorized by class, element, and exotic
+- **Universal Sharing** - Generate links that work in ExoEngine AND DIM
+- **Build Analytics** - See your most-used exotics and playstyles
 
 <div align="center">
   <img src="docs/images/saved_builds.png" width="700px" alt="Tactical Vault"/>
@@ -96,40 +96,40 @@ Save your favorite discoveries to your **private local vault**:
 
 ---
 
-### 🔗 **DIM Integration** - Universal Compatibility
+### **DIM Integration** - Universal Compatibility
 
 ExoEngine plays nice with the Destiny ecosystem:
 
-- 🔄 **Import DIM Links** - Paste any `dim.gg` share link to visualize it in 3D
-- 📤 **Export to DIM** - Generate DIM-compatible links from your builds
-- 🌐 **Universal Sharing** - Share links that work in both ExoEngine and DIM
-- 📋 **Deep Loadout Support** - Full mod, aspect, and fragment preservation
+- **Import DIM Links** - Paste any `dim.gg` share link to visualize it in 3D
+- **Export to DIM** - Generate DIM-compatible links from your builds
+- **Universal Sharing** - Share links that work in both ExoEngine and DIM
+- **Deep Loadout Support** - Full mod, aspect, and fragment preservation
 
 ---
 
-## 🧠 Under the Hood
+## Under the Hood
 
 ExoEngine is built with DIM-grade engineering for Destiny 2 API challenges:
 
-### 🎯 **Smart Inventory Management**
+### **Smart Inventory Management**
 - **Multi-Character Transfers** - Automatically routes items through vault when needed
 - **Proactive Space Checks** - Prevents transfer failures before they happen
 - **Exotic Conflict Resolution** - Intelligently swaps exotics without breaking your loadout
 - **Optimistic UI Updates** - Instant feedback with API validation
 
-### 🔐 **Security & Privacy**
+### **Security & Privacy**
 - **Local-First Architecture** - Your vault data stays on your device
 - **Encrypted Token Storage** - AES-GCM encryption for OAuth tokens
 - **No Analytics Tracking** - Your builds are yours alone
 - **Open Source** - Audit the code yourself
 
-### ⚡ **Performance Optimizations**
+### **Performance Optimizations**
 - **Manifest Trimming** - 90% smaller manifest cache (<10MB vs 100MB+)
 - **Code Splitting** - 23 optimized chunks for fast initial load
 - **Timestamp Protection** - Rejects stale API responses automatically
-- **Dynamic Fragment Slots** - Handles Aspect→Fragment dependencies gracefully
+- **Dynamic Fragment Slots** - Handles Aspectâ†’Fragment dependencies gracefully
 
-### 🔧 **Tech Stack**
+### **Tech Stack**
 ```
 Frontend:     React 19 + TypeScript
 Build Tool:   Vite 7
@@ -142,7 +142,7 @@ API:          Bungie.net + DIM Mappings
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
@@ -178,12 +178,12 @@ npm run dev
 5. **Build for production**
 ```bash
 npm run build
-# Output → /web folder (ready to deploy)
+# Output â†’ /web folder (ready to deploy)
 ```
 
 ---
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### First Time Setup
 1. Visit https://exoengine.online (or your deployed instance)
@@ -212,7 +212,7 @@ npm run build
 
 ---
 
-## 🐛 Known Limitations
+## Known Limitations
 
 - **Error 1663:** Subclass changes only work in Orbit/Social spaces (Bungie API restriction)
 - **Error 1676:** Some mod combinations fail due to energy cost limits
@@ -220,13 +220,13 @@ npm run build
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 ExoEngine is open source! Contributions are welcome:
 
-- 🐛 **Bug Reports:** [Open an issue](https://github.com/luckvj/ExoEngine/issues)
-- ✨ **Feature Requests:** [Start a discussion](https://github.com/luckvj/ExoEngine/discussions)
-- 🔧 **Pull Requests:** Fork, branch, and submit!
+- **Bug Reports:** [Open an issue](https://github.com/luckvj/ExoEngine/issues)
+- **Feature Requests:** [Start a discussion](https://github.com/luckvj/ExoEngine/discussions)
+- **Pull Requests:** Fork, branch, and submit!
 
 ### Development Priorities
 - [ ] Mobile performance optimization
@@ -236,22 +236,22 @@ ExoEngine is open source! Contributions are welcome:
 
 ---
 
-## 💖 Support Development
+## Support Development
 
 > [!IMPORTANT]
 > ExoEngine is developed solo on an aging PC. If this tool enhances your Guardian experience, consider supporting continued development!
 
 **Ways to Support:**
-- ☕ **[Buy me a Ko-fi](https://ko-fi.com/unluckvj)**
-- ⭐ **Star this repo** on GitHub
-- 🐦 **Share** on Twitter with #ExoEngine
-- 🎮 **Use it** and provide feedback!
+- **[Buy me a Ko-fi](https://ko-fi.com/unluckvj)**
+- **Star this repo** on GitHub
+- **Share** on Twitter with #ExoEngine
+- **Use it** and provide feedback!
 
 Every contribution helps maintain servers and fund new features.
 
 ---
 
-## 📬 Credits & Contact
+## Credits & Contact
 
 **Created by:** Vince (Vj)  
 **Twitter:** [@Unluckvj](https://twitter.com/Unluckvj)  
@@ -262,11 +262,11 @@ Every contribution helps maintain servers and fund new features.
 - **Bungie** - For the incredible API and 10 years of Destiny
 - **DIM Team** - For setting the standard and open-source inspiration
 - **Destiny Community** - For endless buildcrafting creativity
-- **Early Testers** - You know who you are 💙
+- **Early Testers** - You know who you are
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
@@ -277,11 +277,11 @@ ExoEngine is a fan-made tool and is not affiliated with, endorsed by, or associa
 
 <div align="center">
   
-### 🌌 Explore. Discover. Dominate.
+### Explore. Discover. Dominate.
 
-**Made with ❤️ for Guardians, by Guardians**
+**Made with love for Guardians, by Guardians**
 
-[🚀 Launch ExoEngine](https://exoengine.online) | [📖 Documentation](https://github.com/luckvj/ExoEngine/wiki) | [💬 Discord](#)
+[Launch ExoEngine](https://exoengine.online) | [Documentation](https://github.com/luckvj/ExoEngine/wiki) | [Discord](#)
 
 ---
 
