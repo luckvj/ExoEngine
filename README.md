@@ -209,12 +209,15 @@ Every contribution helps maintain servers and fund new features.
 
 ---
 
-## License
+## License & Legal
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+**ExoEngine™** is a proprietary trademark. All rights reserved.
 
 ### Legal Disclaimer
-ExoEngine is a fan-made tool and is not affiliated with, endorsed by, or associated with Bungie, Inc. or Destiny 2. All Destiny 2 assets, names, and trademarks are property of Bungie, Inc.
+- ExoEngine™ is a trademark of Vince (Vj). Unauthorized use is prohibited.
+- This is a fan-made tool and is not affiliated with, endorsed by, or associated with Bungie, Inc. or Destiny 2.
+- All Destiny 2 assets, names, and trademarks are property of Bungie, Inc.
+- No part of this software may be reproduced, distributed, or transmitted without explicit permission.
 
 ---
 
