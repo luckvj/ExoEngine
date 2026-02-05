@@ -30,8 +30,8 @@
   # 5. XSS Protection for older browsers
   Header set X-XSS-Protection "1; mode=block"
   
-  # 6. Strict Transport Security (HTTPS only) - uncomment when using HTTPS
-  # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  # 6. Strict Transport Security (HTTPS only)
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
   # 7. Cache Control for assets (performance + security)
   <FilesMatch "\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|otf)$">

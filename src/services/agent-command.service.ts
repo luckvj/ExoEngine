@@ -1,6 +1,6 @@
 /**
  * Agent Command Parser Service
- * Handles natural language command interpretation for the ExoMind agent
+ * Handles natural language command interpretation for the ExoSync agent
  */
 import { subclassParserService } from './subclass-parser.service';
 
@@ -101,11 +101,11 @@ function isDIMLink(input: string): boolean {
  */
 function parseEquipCommand(normalized: string, original: string): { items: Array<{ itemIdentifier: string; isHash: boolean }> } | null {
     const lowerOriginal = original.toLowerCase().trim();
-    
+
     // Try to match equip triggers
     for (const trigger of EQUIP_TRIGGERS) {
         const triggerNormalized = normalizeInput(trigger);
-        
+
         // Check if command starts with the trigger
         if (normalized.startsWith(triggerNormalized)) {
             // Extract everything after the trigger
@@ -124,7 +124,7 @@ function parseEquipCommand(normalized: string, original: string): { items: Array
                 return { items };
             }
         }
-        
+
         // Also check with the normalized string to handle edge cases
         if (normalized.includes(triggerNormalized)) {
             const parts = normalized.split(triggerNormalized);
@@ -148,7 +148,7 @@ function parseEquipCommand(normalized: string, original: string): { items: Array
             }
         }
     }
-    
+
     return null;
 }
 
@@ -160,29 +160,29 @@ function parseNavigationCommand(normalized: string): NavigationCommand | null {
     for (const cmd of NAVIGATION_COMMANDS) {
         for (const keyword of cmd.keywords) {
             const keywordNormalized = normalizeInput(keyword); // Apply same normalization!
-            
+
             // Direct match (e.g., "builds")
             if (normalized === keywordNormalized) {
                 return cmd;
             }
-            
+
             // Check if normalized input contains the keyword
             if (normalized.includes(keywordNormalized)) {
                 return cmd;
             }
-            
+
             // With navigation trigger (e.g., "go to builds" -> "gotobuilds")
             for (const trigger of NAVIGATION_TRIGGERS) {
                 const triggerNormalized = normalizeInput(trigger);
                 const fullCommand = triggerNormalized + keywordNormalized;
-                
-                if (normalized === fullCommand || 
+
+                if (normalized === fullCommand ||
                     normalized.startsWith(fullCommand) ||
                     normalized.endsWith(fullCommand)) {
                     return cmd;
                 }
             }
-            
+
             // With common suffixes (e.g., "builds page" -> "buildspage")
             const suffixes = ['page', 'screen', 'view', 'mode', 'tab'];
             for (const suffix of suffixes) {
@@ -194,7 +194,7 @@ function parseNavigationCommand(normalized: string): NavigationCommand | null {
             }
         }
     }
-    
+
     return null;
 }
 
@@ -203,7 +203,7 @@ function parseNavigationCommand(normalized: string): NavigationCommand | null {
  */
 export function parseCommand(input: string): CommandResult {
     const trimmed = input.trim();
-    
+
     if (!trimmed) {
         return {
             type: 'unknown',
@@ -211,7 +211,7 @@ export function parseCommand(input: string): CommandResult {
             success: false
         };
     }
-    
+
     // Check for DIM links first
     if (isDIMLink(trimmed)) {
         const encodedUrl = encodeURIComponent(trimmed);
@@ -222,29 +222,29 @@ export function parseCommand(input: string): CommandResult {
             success: true
         };
     }
-    
+
     // Check for natural language equip patterns first
     for (const pattern of NATURAL_EQUIP_PATTERNS) {
         const match = trimmed.match(pattern);
         if (match && match[1]) {
             const itemsString = match[1].trim();
-            
+
             // Check if this includes subclass configuration
             const hasSubclass = subclassParserService.containsSubclassKeywords(itemsString);
-            
+
             // Split by comma, "and", or "with" for multiple items
             // First replace " and " and " with " with commas, then split by comma
             const normalizedString = itemsString
                 .replace(/\s+and\s+/gi, ',')
                 .replace(/\s+with\s+/gi, ',');
             const itemStrings = normalizedString.split(',').map(s => s.trim()).filter(s => s.length > 0);
-            
+
             const items = itemStrings.map(itemStr => {
                 // Check if it's a hash (all digits)
                 const isHash = /^\d+$/.test(itemStr);
                 return { itemIdentifier: itemStr, isHash };
             });
-            
+
             if (hasSubclass) {
                 // This is a full loadout with subclass config
                 return {
@@ -252,7 +252,7 @@ export function parseCommand(input: string): CommandResult {
                     message: `Configuring loadout...`,
                     success: true,
                     actionType: 'loadout',
-                    actionPayload: { 
+                    actionPayload: {
                         items,
                         subclassText: itemsString
                     }
@@ -260,10 +260,10 @@ export function parseCommand(input: string): CommandResult {
             } else {
                 // Just equipping items
                 const itemCount = items.length;
-                const displayText = itemCount === 1 
+                const displayText = itemCount === 1
                     ? (items[0].isHash ? `item hash ${items[0].itemIdentifier}` : items[0].itemIdentifier)
                     : `${itemCount} items`;
-                
+
                 return {
                     type: 'action',
                     message: `Searching for ${displayText}...`,
@@ -274,33 +274,33 @@ export function parseCommand(input: string): CommandResult {
             }
         }
     }
-    
+
     // Check for traditional equip commands
     const normalized = normalizeInput(trimmed);
     const equipCommand = parseEquipCommand(normalized, trimmed);
-    
+
     if (equipCommand) {
         const itemCount = equipCommand.items.length;
-        const displayText = itemCount === 1 
-            ? (equipCommand.items[0].isHash 
+        const displayText = itemCount === 1
+            ? (equipCommand.items[0].isHash
                 ? `item hash ${equipCommand.items[0].itemIdentifier}`
                 : equipCommand.items[0].itemIdentifier)
             : `${itemCount} items`;
-        
+
         return {
             type: 'action',
             message: `Searching for ${displayText}...`,
             success: true,
             actionType: 'equip',
-            actionPayload: { 
+            actionPayload: {
                 items: equipCommand.items
             }
         };
     }
-    
+
     // Check for navigation commands
     const navCommand = parseNavigationCommand(normalized);
-    
+
     if (navCommand) {
         return {
             type: 'navigation',
@@ -309,7 +309,7 @@ export function parseCommand(input: string): CommandResult {
             success: true
         };
     }
-    
+
     // Unknown command
     return {
         type: 'unknown',
@@ -325,10 +325,10 @@ export function getCommandSuggestions(input: string): string[] {
     if (!input.trim()) {
         return [];
     }
-    
+
     const normalized = normalizeInput(input);
     const suggestions: string[] = [];
-    
+
     // Match against navigation commands
     for (const cmd of NAVIGATION_COMMANDS) {
         for (const keyword of cmd.keywords) {
@@ -338,6 +338,6 @@ export function getCommandSuggestions(input: string): string[] {
             }
         }
     }
-    
+
     return suggestions.slice(0, 5); // Limit to 5 suggestions
 }

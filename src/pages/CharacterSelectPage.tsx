@@ -248,7 +248,7 @@ export function CharacterSelectPage() {
                                     />
                                 </div>
                                 <div className="btn-text-content">
-                                    <span className="btn-main-text">ESTABLISH EXOMIND</span>
+                                    <span className="btn-main-text">ESTABLISH EXOENGINE</span>
                                     <span className="btn-sub">Connect with Bungie.net</span>
                                 </div>
                             </button>

@@ -7,7 +7,7 @@ interface ScreenTabsProps {
 }
 
 const TABS = [
-    { label: 'ExoMind', path: '/agent-wake' },
+    { label: 'ExoSync', path: '/agent-wake' },
     { label: 'Builds', path: '/builds' },
     { label: 'Galaxy', path: '/galaxy' },
     { label: 'Settings', path: '/settings' }

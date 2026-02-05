@@ -12,8 +12,8 @@ ExoEngine™ is a high-performance, proprietary platform designed for advanced D
 
 ## Core Infrastructure
 
-### Agent Wake™: Natural Language Orchestration
-Agent Wake™ provides a sophisticated natural language interface for real-time inventory operations. Utilizing advanced text-parsing algorithms, it allows users to execute complex equipment commands through intuitive prose.
+### ExoSync™: Natural Language Orchestration
+ExoSync™ provides a sophisticated natural language interface for real-time inventory operations. Utilizing advanced text-parsing algorithms, it allows users to execute complex equipment commands through intuitive prose.
 - **Dynamic Command Resolution**: Translates natural language into precise API actions for item transfers and equipment.
 - **Holistic Build Deployment**: Simultaneously manages weapons, armor, subclasses, and all associated modification sockets.
 - **Cross-Character Coordination**: Orchestrates multi-stage transfers involving the vault and character inventories to ensure seamless build transitions.
@@ -63,7 +63,7 @@ ExoEngine™ is engineered for high-fidelity performance and data integrity.
 ### Initialization
 1. Authenticate via the secure Bungie.net OAuth portal.
 2. Allow the initial manifest synchronization to proceed (time varies based on network conditions).
-3. Access the core modules—Agent Wake™, Synergy Galaxy™, and the Build Architect—via the primary navigation interface.
+3. Access the core modules—ExoSync™, Synergy Galaxy™, and the Build Architect—via the primary navigation interface.
 
 ### Deployment Guidelines
 - **Activity Restrictions**: Certain equipment operations (such as subclass modification) are restricted by the Bungie API to non-combat zones such as Orbit or Social Spaces.
@@ -76,7 +76,7 @@ ExoEngine™ is engineered for high-fidelity performance and data integrity.
 **ExoEngine™ is a proprietary trademark. All rights reserved.**
 
 ### Intellectual Property Statement
-ExoEngine™ and all associated module names (Agent Wake™, Synergy Galaxy™) are trademarks of their respective owner. Unauthorized reproduction, distribution, or decompilation of this platform's assets or code is strictly prohibited.
+ExoEngine™ and all associated module names (ExoSync™, Synergy Galaxy™) are trademarks of their respective owner. Unauthorized reproduction, distribution, or decompilation of this platform's assets or code is strictly prohibited.
 
 ### Disclaimer
 ExoEngine™ is a third-party utility. It is not affiliated with, endorsed by, or associated with Bungie, Inc. Destiny 2 assets and terminology are the intellectual property of Bungie, Inc.
