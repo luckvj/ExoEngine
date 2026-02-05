@@ -71,6 +71,14 @@ ExoEngine™ is engineered for high-fidelity performance and data integrity.
 
 ---
 
+## Project Links
+
+- **Official Platform**: [exoengine.online](https://exoengine.online/)
+- **Developer Twitter**: [@UnLuckvj](https://x.com/UnLuckvj)
+- **Primary Developer Portal**: [unluckvj.xyz](https://unluckvj.xyz/)
+
+---
+
 ## Legal and Trademark Information
 
 **ExoEngine™ is a proprietary trademark. All rights reserved.**

@@ -1,3 +1,10 @@
+# Selective ignore to keep only README and images on remote
+/*
+!README.md
+!LICENSE
+!docs/
+!docs/**
+
 # Logs
 logs
 *.log
@@ -7,13 +14,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Standard Ignore
 node_modules
+web/
+dist/
 dist-ssr
 *.local
-
-# Editor directories and files
+.env
+.env*
 .vscode/*
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -21,14 +30,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Security - NEVER commit these files!
-.env
-.env.local
-.env.production
-.env.development
-*.key
-*.pem
-
-# External Folders
 DIM/
+
+# Artifacts/Tools
+.antigravity/
+.claude/
+brain/
