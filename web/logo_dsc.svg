@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tactical UI Version: Plain color, sharp, and high-fidelity -->
+  <g>
+    <!-- Left Pillar -->
+    <path d="M100 462V270L150 220V50H246V462H100Z" fill="white"/>
+    <!-- Right Pillar -->
+    <path d="M412 462V270L362 220V50H266V462H412Z" fill="white"/>
+  </g>
+</svg>

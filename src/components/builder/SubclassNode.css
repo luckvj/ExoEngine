@@ -1,0 +1,339 @@
+.subclass-node-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+}
+
+.subclass-node {
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+}
+
+.subclass-node:focus,
+.subclass-node:focus-visible,
+.subclass-node:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.subclass-node:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+/* Diamond Shape */
+.subclass-node--diamond {
+    width: 200px;
+    height: 200px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Large diamond variant */
+.subclass-node--diamond.subclass-node--large {
+    width: 300px;
+    height: 300px;
+}
+
+/* Hide border for large diamond (Super) */
+.subclass-node--diamond.subclass-node--large .subclass-node__border {
+    display: none !important;
+}
+
+.subclass-node--diamond .subclass-node__border {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--glass-border);
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+}
+
+.subclass-node--diamond:hover .subclass-node__border {
+    color: var(--foreground);
+    filter: drop-shadow(0 0 15px currentColor);
+    transform: scale(1.05);
+}
+
+/* Square Shape */
+.subclass-node--square {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 4px;
+    /* Slightly more rounded for larger size */
+    background: none;
+}
+
+.subclass-node--square.subclass-node--small {
+    width: 80px;
+    height: 80px;
+}
+
+.subclass-node--square:hover {
+    border: none;
+    box-shadow: none;
+}
+
+/* Round Shape (for Supers mostly) */
+.subclass-node--round {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+}
+
+.subclass-node--round.subclass-node--small {
+    width: 72px;
+    height: 72px;
+}
+
+.subclass-node__inner {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.subclass-node__inner::after {
+    content: '';
+    position: absolute;
+    inset: -10%;
+    pointer-events: none;
+    z-index: 3;
+    mix-blend-mode: hue;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: inherit;
+    background: transparent !important;
+}
+
+/* Show tint for Strand and Stasis to unify shared icons */
+.element-strand .subclass-node__inner::after {
+    background: transparent !important;
+    opacity: 0;
+}
+
+.element-stasis .subclass-node__inner::after {
+    background: transparent !important;
+    opacity: 0;
+}
+
+/* Prismatic tint removed per user request */
+
+.element-void .subclass-node__inner::after {
+    background: transparent !important;
+    opacity: 0;
+}
+
+.element-solar .subclass-node__inner::after {
+    background: transparent !important;
+    opacity: 0;
+}
+
+.element-arc .subclass-node__inner::after {
+    background: transparent !important;
+    opacity: 0;
+}
+
+.subclass-node--large .subclass-node__inner {
+    width: 80%;
+    height: 80%;
+}
+
+.subclass-node__icon {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.subclass-node__label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Element Styles - Diamond Glows */
+.subclass-node.element-void .subclass-node__border {
+    color: var(--void-primary);
+    filter: drop-shadow(0 0 12px rgba(191, 132, 255, 0.6));
+}
+
+.subclass-node.element-solar .subclass-node__border {
+    color: var(--solar-primary);
+    filter: drop-shadow(0 0 12px rgba(255, 140, 58, 0.6));
+}
+
+.subclass-node.element-arc .subclass-node__border {
+    color: var(--arc-primary);
+    filter: drop-shadow(0 0 12px rgba(125, 249, 255, 0.6));
+}
+
+.subclass-node.element-stasis .subclass-node__border {
+    color: var(--stasis-primary);
+    filter: drop-shadow(0 0 12px rgba(77, 136, 255, 0.6));
+}
+
+.subclass-node.element-strand .subclass-node__border {
+    color: var(--strand-primary);
+    filter: drop-shadow(0 0 12px rgba(74, 255, 155, 0.6));
+}
+
+.subclass-node.element-prismatic .subclass-node__border {
+    color: var(--prismatic-primary, #ff8df6);
+    filter: none !important;
+}
+
+/* Hover intensities */
+.subclass-node.element-void:hover .subclass-node__border {
+    filter: drop-shadow(0 0 35px rgba(191, 132, 255, 0.9));
+}
+
+.subclass-node.element-solar:hover .subclass-node__border {
+    filter: drop-shadow(0 0 35px rgba(255, 140, 58, 0.9));
+}
+
+.subclass-node.element-arc:hover .subclass-node__border {
+    filter: drop-shadow(0 0 35px rgba(125, 249, 255, 0.9));
+}
+
+.subclass-node.element-stasis:hover .subclass-node__border {
+    filter: drop-shadow(0 0 35px rgba(77, 136, 255, 0.9));
+}
+
+.subclass-node.element-strand:hover .subclass-node__border {
+    filter: drop-shadow(0 0 35px rgba(74, 255, 155, 0.9));
+}
+
+.subclass-node.element-prismatic:hover .subclass-node__border {
+    filter: none !important;
+}
+
+/* Element Styles - Square & Round border colors - REMOVED per user request */
+.subclass-node--square.element-void,
+.subclass-node--round.element-void {
+    background: none;
+    border: none;
+}
+
+.subclass-node--square.element-solar,
+.subclass-node--round.element-solar {
+    background: none;
+    border: none;
+}
+
+.subclass-node--square.element-arc,
+.subclass-node--round.element-arc {
+    background: none;
+    border: none;
+}
+
+.subclass-node--square.element-stasis,
+.subclass-node--round.element-stasis {
+    background: none;
+    border: none;
+}
+
+.subclass-node--square.element-strand,
+.subclass-node--round.element-strand {
+    background: none;
+    border: none;
+}
+
+.subclass-node--square.element-strand:hover,
+.subclass-node--round.element-strand:hover {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Small diamond variant for wings */
+.subclass-node--diamond.subclass-node--small {
+    width: 56px;
+    height: 56px;
+}
+
+.subclass-node--diamond.subclass-node--small .subclass-node__border {
+    stroke-width: 4px;
+    /* Thicker relative stroke for visibility */
+}
+
+/* Wing Layout - Simple Horizontal Line */
+.subclass-wing--left,
+.subclass-wing--right {
+    position: absolute;
+    top: 50%;
+    /* Centered vertically on the hero node */
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Let clicks pass through containers */
+}
+
+.subclass-wing--left {
+    right: 95px;
+    /* Close to the 160px center (80px half-width + gap) */
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.subclass-wing--right {
+    left: 95px;
+    /* Close to the 160px center (80px half-width + gap) */
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* Ensure buttons are clickable */
+.subclass-wing--left .subclass-node,
+.subclass-wing--right .subclass-node {
+    pointer-events: auto;
+}
+
+.subclass-node--square.element-prismatic {
+    background: none;
+    border: none;
+}
+
+.subclass-node--round.element-prismatic {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* No Border Variant */
+.subclass-node--no-border {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.subclass-node--no-border:hover {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.subclass-node--no-border .subclass-node__border {
+    display: none !important;
+}

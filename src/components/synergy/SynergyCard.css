@@ -1,0 +1,769 @@
+.synergy-card {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(10, 12, 15, 0.6);
+    /* Same transparency as subclass menu */
+    backdrop-filter: blur(20px) saturate(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px;
+    gap: 20px;
+    transition: all 0.2s ease-out;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.synergy-card:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Elemental Glows - Left Accent & Ambient */
+.synergy-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.synergy-card--void::before {
+    background: #bf84ff;
+    box-shadow: 0 0 15px rgba(191, 132, 255, 0.8);
+}
+
+.synergy-card--solar::before {
+    background: #ff8c3a;
+    box-shadow: 0 0 15px rgba(255, 140, 58, 0.8);
+}
+
+.synergy-card--arc::before {
+    background: #7df9ff;
+    box-shadow: 0 0 15px rgba(125, 249, 255, 0.8);
+}
+
+.synergy-card--stasis::before {
+    background: #4d88ff;
+    box-shadow: 0 0 15px rgba(77, 136, 255, 0.8);
+}
+
+.synergy-card--strand::before {
+    background: #4aff9b;
+    box-shadow: 0 0 15px rgba(74, 255, 155, 0.8);
+}
+
+.synergy-card--prismatic::before {
+    background: #ff8df6;
+    box-shadow: 0 0 20px rgba(255, 141, 246, 1.0);
+}
+
+/* Ambient Background Glow */
+.synergy-card__glow {
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.synergy-card:hover .synergy-card__glow {
+    opacity: 0.3;
+}
+
+.synergy-card--void .synergy-card__glow {
+    background: radial-gradient(circle, #bf84ff 0%, transparent 70%);
+}
+
+.synergy-card--solar .synergy-card__glow {
+    background: radial-gradient(circle, #ff8c3a 0%, transparent 70%);
+}
+
+.synergy-card--arc .synergy-card__glow {
+    background: radial-gradient(circle, #7df9ff 0%, transparent 70%);
+}
+
+.synergy-card--stasis .synergy-card__glow {
+    background: radial-gradient(circle, #4d88ff 0%, transparent 70%);
+}
+
+.synergy-card--strand .synergy-card__glow {
+    background: radial-gradient(circle, #4aff9b 0%, transparent 70%);
+}
+
+.synergy-card--prismatic .synergy-card__glow {
+    background: radial-gradient(circle, #ff8df6 0%, transparent 70%);
+}
+
+
+.synergy-card__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.synergy-card__screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    opacity: 0.7;
+    /* Increased from 0.45 */
+    filter: brightness(0.9) contrast(1.1);
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.synergy-card:hover .synergy-card__screenshot {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.synergy-card__vignette {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(10, 12, 15, 1) 0%,
+            rgba(10, 12, 15, 0.9) 25%,
+            rgba(10, 12, 15, 0.3) 60%,
+            rgba(10, 12, 15, 0) 100%);
+}
+
+.synergy-card__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 240px;
+    flex-shrink: 0;
+}
+
+.synergy-card__super-icon {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.synergy-card__super-icon img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.synergy-element-badge {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+.synergy-card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.synergy-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.synergy-card__subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-top: 2px;
+}
+
+/* Horizontal Nodes Middle (Compact) */
+.synergy-card__nodes {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.synergy-card .subclass-node-container {
+    transform: scale(0.65);
+    margin: -10px;
+}
+
+.synergy-card .subclass-node-container.diamond {
+    transform: scale(0.75);
+}
+
+.fragment-row {
+    display: flex;
+    gap: 4px;
+    margin-left: 8px;
+}
+
+.fragment-icon-tiny {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Actions Area (Right) */
+.synergy-card__actions {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.synergy-card__exotics {
+    display: flex;
+    gap: 6px;
+}
+
+.exotic-icon-preview {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ceae33;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.synergy-card__buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-synergy {
+    height: 28px;
+    padding: 0 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 1px;
+}
+
+.btn-synergy:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-synergy--primary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border: none;
+}
+
+.btn-synergy--primary:hover {
+    background: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.synergy-card__expansion-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 9px;
+    padding: 2px 6px;
+    text-transform: uppercase;
+}
+
+.synergy-card__loading-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 12, 15, 0.8);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+/* Full-Screen Details Menu (Subclass Screen Style) */
+.synergy-details-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(10, 12, 15, 0.6);
+    /* High transparency */
+    backdrop-filter: blur(20px) saturate(1.2);
+    /* Premium glass effect */
+    display: flex;
+    flex-direction: column;
+    animation: details-fade-in 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+    color: #fff;
+    overflow: hidden;
+}
+
+@keyframes details-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(1.02);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.synergy-details__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.synergy-details__screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    /* Increased opacity */
+    filter: blur(4px) brightness(0.6);
+    /* Significantly reduced blur */
+}
+
+.synergy-details__vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%),
+        linear-gradient(to bottom, transparent 0%, rgba(10, 12, 15, 0.6) 100%);
+}
+
+/* Details Screen Elemental Glow */
+.synergy-details-overlay::after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    width: 40%;
+    height: 80%;
+    transform: translateY(-50%);
+    filter: blur(150px);
+    opacity: 0.2;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.synergy-details-overlay--void::after {
+    background: radial-gradient(circle, #bf84ff 0%, transparent 70%);
+}
+
+.synergy-details-overlay--solar::after {
+    background: radial-gradient(circle, #ff8c3a 0%, transparent 70%);
+}
+
+.synergy-details-overlay--arc::after {
+    background: radial-gradient(circle, #7df9ff 0%, transparent 70%);
+}
+
+.synergy-details-overlay--stasis::after {
+    background: radial-gradient(circle, #4d88ff 0%, transparent 70%);
+}
+
+.synergy-details-overlay--strand::after {
+    background: radial-gradient(circle, #4aff9b 0%, transparent 70%);
+}
+
+.synergy-details-overlay--prismatic::after {
+    background: radial-gradient(circle, #ff8df6 0%, transparent 70%);
+}
+
+
+.synergy-details__header {
+    position: relative;
+    z-index: 2;
+    padding: 60px 100px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.synergy-details__name {
+    font-size: 56px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.synergy-details__subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+}
+
+.btn-close-details {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-close-details:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Main Content */
+.synergy-details__main {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    /* Align to top of grid area */
+    padding: 0 100px;
+    gap: 80px;
+}
+
+.synergy-details__left {
+    flex-shrink: 0;
+    padding-top: 50px;
+}
+
+/* Right Side Grid Layout */
+.synergy-details__right-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 50px 80px;
+    /* Vert gap between rows, Horiz gap between Abilities/Aspects */
+    flex: 1;
+    padding-top: 50px;
+}
+
+.section-abilities {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.section-aspects {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.section-fragments {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin-top: 10px;
+}
+
+/* Node Sections */
+.node-section {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.node-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    white-space: nowrap;
+}
+
+.node-section-header::before {
+    content: '';
+    width: 2px;
+    height: 12px;
+    background: currentColor;
+    opacity: 0.8;
+}
+
+.node-section-header::after {
+    content: '';
+    flex: 1;
+    min-width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, currentColor, transparent);
+    opacity: 0.2;
+}
+
+.node-section-content {
+    display: flex;
+    gap: 15px;
+}
+
+.synergy-details__fragments-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.synergy-details__fragments-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.synergy-details__footer {
+    position: relative;
+    z-index: 2;
+    padding: 40px 100px 100px;
+    /* Added 60px bottom padding to prevent intersection with footer bar */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.synergy-details__exotics-preview {
+    display: flex;
+    gap: 20px;
+}
+
+.exotic-details-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent;
+    /* Removed background */
+    border: none;
+    /* Removed border */
+    padding: 10px 0;
+    /* Adjusted padding */
+    backdrop-filter: none;
+    /* Removed blur */
+}
+
+.exotic-details-item img {
+    width: 64px;
+    height: 64px;
+}
+
+.exotic-name {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ceae33;
+    margin: 0;
+}
+
+.exotic-slot {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+.btn-details-action {
+    height: 50px;
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-details-action--primary {
+    background: #fff;
+    color: #000;
+    border: none;
+}
+
+/* Bottom Action Bar (D2 Key Prompt Style) */
+.synergy-details__footer-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.45);
+    /* Aligned with subclass menu footer opacity */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 40px;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 100;
+}
+
+.key-prompt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.key-prompt:hover {
+    opacity: 0.8;
+}
+
+.key-cap {
+    background: transparent;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 4px;
+    min-width: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    line-height: 1;
+}
+
+.key-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.5px;
+}
+
+/* Build Description Overlay */
+.synergy-details__lore-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 60px;
+    width: 600px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8) 20%);
+    backdrop-filter: blur(10px);
+    z-index: 90;
+    padding: 80px 100px 80px 40px;
+    /* Extra right padding for scroll accent */
+    border-left: none;
+    transform: translateX(100%);
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+}
+
+.synergy-details__lore-panel::after {
+    content: '';
+    position: absolute;
+    right: 40px;
+    top: 100px;
+    bottom: 100px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.synergy-details__lore-panel--open {
+    transform: translateX(0);
+}
+
+.lore-panel__header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.lore-panel__title {
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0px;
+    line-height: 0.9;
+}
+
+.lore-panel__subtitle {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 16px;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.lore-panel__content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-family: 'Inter', sans-serif;
+    /* Cleaner font */
+}
+
+/* UI Hidden State */
+.synergy-details--hidden .synergy-details__header,
+.synergy-details--hidden .synergy-details__main,
+.synergy-details--hidden .synergy-details__footer,
+.synergy-details--hidden .synergy-details__lore-panel {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.synergy-details--hidden .synergy-details__footer-bar {
+    opacity: 0.8;
+}
+
+/* Ensure smooth transition for normal state too */
+.synergy-details__header,
+.synergy-details__main,
+.synergy-details__footer,
+.synergy-details__lore-panel {
+    transition: opacity 0.3s ease;
+}

@@ -1,0 +1,470 @@
+.subclass-screen {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--foreground);
+    background: rgba(0, 0, 0, 0.4);
+    /* Solid enough to see UI, transparent enough to see character */
+    backdrop-filter: blur(12px) saturate(120%);
+    z-index: 10000;
+    /* Above everything */
+    padding-top: 100px;
+    /* Offset for global header */
+    overflow: hidden;
+    user-select: none;
+    animation: subclass-overlay-in 0.3s ease-out;
+}
+
+@keyframes subclass-overlay-in {
+    from {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Element-themed glow accents - refined for overlay transparency */
+.subclass-screen.element-void {
+    background: radial-gradient(circle at 30% 50%, rgba(130, 40, 255, 0.15), transparent 70%), rgba(10, 5, 15, 0.5);
+}
+
+.subclass-screen.element-solar {
+    background: radial-gradient(circle at 30% 50%, rgba(255, 120, 20, 0.15), transparent 70%), rgba(10, 5, 5, 0.5);
+}
+
+.subclass-screen.element-arc {
+    background: radial-gradient(circle at 30% 50%, rgba(0, 200, 255, 0.1), transparent 70%), rgba(5, 10, 15, 0.5);
+}
+
+.subclass-screen.element-stasis {
+    background: radial-gradient(circle at 30% 50%, rgba(77, 136, 255, 0.1), transparent 70%), rgba(5, 10, 15, 0.5);
+}
+
+.subclass-screen.element-strand {
+    background: radial-gradient(circle at 30% 50%, rgba(74, 255, 155, 0.1), transparent 70%), rgba(5, 15, 10, 0.5);
+}
+
+.subclass-screen.element-prismatic {
+    background: radial-gradient(circle at 30% 50%, rgba(255, 141, 246, 0.15), transparent 70%), rgba(15, 5, 15, 0.5);
+}
+
+/* Header */
+.subclass-screen__header {
+    padding: var(--space-lg) var(--space-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    z-index: 10;
+}
+
+.subclass-screen__title h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.subclass-screen__subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 4px 0 0;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+
+/* Service Alert - Full Width Bottom Banner */
+.subclass-screen__service-alert {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    background: #e1e1e1;
+    /* Light gray background from image */
+    border-top: 4px solid #ff3b30;
+    /* The striking red line */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 20000;
+    /* Higher than footer */
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5);
+    animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-alert-content {
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+    gap: 16px;
+}
+
+.service-alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff3b30;
+    /* Red icon */
+}
+
+.service-alert-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.alert-bold {
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.alert-message {
+    color: #4a4a4a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.service-alert-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.service-alert-progress-fill {
+    height: 100%;
+    background: #ff3b30;
+    transition: width 0.3s ease;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Content Layout: Left (Super) | Middle (Abilities) | Right (Spacer) */
+.subclass-screen__content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 350px 1fr 1fr;
+    padding-left: 200px;
+    /* Moved more to right */
+    gap: 3rem;
+    align-items: start;
+    padding-top: 15vh;
+    /* Moved down */
+}
+
+.subclass-screen__super-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    background: transparent;
+}
+
+.subclass-screen__diamond-wrapper {
+    position: relative;
+    transform: scale(1.5);
+    background: transparent;
+    /* Make it big like the reference */
+}
+
+/* Hide the border for the Super node */
+.subclass-screen__diamond-wrapper .subclass-node__border {
+    display: none !important;
+}
+
+.subclass-screen__middle {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    /* Increased to move fragments further down */
+}
+
+/* Top Row: Transcendence | Abilities | Aspects */
+.subclass-screen__top-row {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+
+.subclass-screen__bottom-row {
+    display: flex;
+    gap: 3rem;
+}
+
+.subclass-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    margin: 0;
+    padding-left: 4px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.section-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 60px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-left: 8px;
+}
+
+.subclass-group__slots {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Individual Slot Column */
+.subclass-slot-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.slot-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    opacity: 0.7;
+    white-space: nowrap;
+    min-height: 1em;
+}
+
+.subclass-slot {
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.subclass-slot:hover {
+    transform: translateY(-2px);
+    z-index: 50;
+    /* Bring hovered slot above others */
+}
+
+/* Spacer for right side */
+.subclass-screen__right-spacer {
+    /* This empty div takes up the right space, mimicking the character model area */
+    min-height: 100%;
+}
+
+/* Dynamic Exotic Background */
+.subclass-screen__exotic-bg {
+    position: absolute;
+    inset: -20px;
+    /* Expand slightly to prevent edges showing during movement */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: luminosity;
+    /* Parallax Effect */
+    transform: translate(calc(var(--parallax-x, 0) * -40px),
+            calc(var(--parallax-y, 0) * -40px));
+    transition: transform 0.1s linear;
+}
+
+/* Subclass Bottom Controls (D2 Style) */
+.subclass-screen__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.45);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.subclass-screen__controls-left {
+    display: flex;
+    gap: 24px;
+}
+
+.subclass-screen__controls-right {
+    display: flex;
+    gap: 32px;
+    pointer-events: auto;
+}
+
+.d2-control-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.d2-control-item.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.d2-control-item:hover {
+    opacity: 0.8;
+}
+
+.d2-key-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 8px;
+    background: transparent;
+    color: #fff;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: none;
+}
+
+.d2-control-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* UI Hiding Logic */
+.ui-hidden .subclass-screen__header,
+.ui-hidden .subclass-screen__content {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.subclass-screen__header,
+.subclass-screen__content {
+    transition: opacity 0.3s ease;
+}
+
+/* Lore Overlay */
+.subclass-lore-overlay {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.subclass-lore-content {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.lore-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.lore-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.lore-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    letter-spacing: 0.3em;
+}
+
+.lore-body {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-body);
+    white-space: pre-wrap;
+}
+
+.lore-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+}

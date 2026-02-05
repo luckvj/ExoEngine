@@ -1,0 +1,158 @@
+.quest-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Reduced from 16px */
+    width: fit-content;
+    /* Section A width */
+    flex-shrink: 0;
+    padding-top: 0px;
+    position: sticky;
+    top: 240px;
+    /* Adjusted up further to optimize screen space */
+    /* Below global header */
+    height: fit-content;
+    z-index: 10;
+}
+
+.quest-sidebar__search-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.quest-sidebar__search-container svg {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.quest-sidebar__search {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+    font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif);
+    font-size: 0.875rem;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.quest-sidebar__search::placeholder {
+    color: #666;
+}
+
+.quest-sidebar__search:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.quest-sidebar__filters-row {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    /* Reduced from 16px */
+}
+
+.quest-sidebar__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    /* Reduced from 8px */
+}
+
+.quest-sidebar__label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.quest-sidebar__track {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    /* Very tight gap for items */
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 0;
+    /* Reduced padding */
+    border-radius: 4px;
+    /* Optional: border similar to D2 interface container if needed */
+}
+
+.quest-sidebar__track--expansions {
+    max-height: 480px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.quest-sidebar__track--expansions::-webkit-scrollbar {
+    display: none;
+}
+
+/* The animated highlight "Emblem" */
+.quest-sidebar__highlight {
+    position: absolute;
+    left: -2px;
+    width: 76px;
+    height: 68px;
+    background: transparent;
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    z-index: 0;
+}
+
+.quest-sidebar__item {
+    position: relative;
+    width: 72px;
+    /* Increased from 60px to fit larger icons */
+    height: 68px;
+    /* Increased from 56px to fit larger icons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    background: transparent;
+    transition: opacity 0.2s;
+    opacity: 0.5;
+}
+
+.quest-sidebar__item:hover {
+    opacity: 0.8;
+}
+
+.quest-sidebar__item--active {
+    opacity: 1;
+}
+
+.quest-sidebar__icon {
+    width: 48px;
+    /* Increased from 32px */
+    height: 48px;
+    /* Increased from 32px */
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.5) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: filter 0.2s ease;
+}
+
+.quest-sidebar__item:hover .quest-sidebar__icon,
+.quest-sidebar__item--active .quest-sidebar__icon {
+    filter: grayscale(0%) brightness(1.2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
+/* Removed element-specific colored highlights - using neutral styling */

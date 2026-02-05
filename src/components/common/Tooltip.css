@@ -1,0 +1,95 @@
+.tooltip-trigger {
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip-portal {
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+}
+
+.tooltip-content {
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    width: 280px;
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+.tooltip-header {
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-title {
+    font-size: var(--font-md);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.tooltip-type {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tooltip-description {
+    font-size: var(--font-sm);
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.tooltip-stats {
+    margin-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    background: transparent;
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+.tooltip-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-xs);
+}
+
+.tooltip-stat__label {
+    color: var(--text-muted);
+}
+
+.tooltip-stat__value {
+    color: var(--primary);
+    font-family: var(--font-mono);
+}
+
+/* Element Specific Borders */
+.tooltip-content--void {
+    border-color: rgba(187, 134, 252, 0.3);
+}
+
+.tooltip-content--solar {
+    border-color: rgba(255, 153, 0, 0.3);
+}
+
+.tooltip-content--arc {
+    border-color: rgba(0, 204, 255, 0.3);
+}
+
+.tooltip-content--stasis {
+    border-color: rgba(77, 148, 255, 0.3);
+}
+
+.tooltip-content--strand {
+    border-color: rgba(51, 255, 153, 0.3);
+}
+
+.tooltip-content--prismatic {
+    border-color: rgba(255, 255, 255, 0.5);
+}

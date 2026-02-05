@@ -1,0 +1,2 @@
+import{j as v}from"./markdown-DyKRzreE.js";import"./react-vendor-BrsWO7iZ.js";function m({children:l,element:a,className:e="",onClick:s,hoverable:o=!1,glowing:r=!1,style:t}){const d=a?`glass-${a}`:"",c=o?"glass-card--hoverable":"",g=r?"glass-card--glowing":"",n=s?"glass-card--clickable":"";return v.jsx("div",{className:`glass-card glass ${d} ${c} ${g} ${n} ${e}`,onClick:s,style:t,role:s?"button":void 0,tabIndex:s?0:void 0,onKeyDown:s?i=>i.key==="Enter"&&s():void 0,children:l})}export{m as G};
+//# sourceMappingURL=GlassCard-BkPUaR69.js.map

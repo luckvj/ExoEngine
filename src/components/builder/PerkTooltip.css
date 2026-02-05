@@ -1,0 +1,45 @@
+.perk-tooltip {
+    position: fixed;
+    width: 300px;
+    background: transparent;
+    border: none;
+    border-top: none;
+    /* Dynamic based on hover? */
+    padding: 0;
+    z-index: var(--z-tooltip);
+    pointer-events: none;
+    box-shadow: none;
+}
+
+.perk-tooltip__header {
+    padding: 12px 16px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+}
+
+.perk-tooltip__name {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--foreground);
+}
+
+.perk-tooltip__type {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.perk-tooltip__body {
+    padding: 16px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Destiny Keywords */
+.keyword {
+    color: var(--tier-exotic);
+    font-weight: 600;
+}

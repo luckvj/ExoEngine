@@ -1,0 +1,168 @@
+.transfer-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    background: transparent;
+    pointer-events: none;
+}
+
+.transfer-menu-container {
+    position: fixed;
+    pointer-events: auto;
+}
+
+.transfer-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+.transfer-menu-header {
+    text-align: center;
+}
+
+.transfer-menu-header h3 {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.transfer-menu-body {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+}
+
+.transfer-menu-character {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.transfer-menu-character:hover {
+    transform: translateY(-2px);
+}
+
+.transfer-menu-character.selected .transfer-menu-character-icon {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.transfer-menu-character.hovered .transfer-menu-character-icon {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.transfer-menu-character-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+    overflow: hidden;
+}
+
+.transfer-menu-character-icon img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.transfer-menu-character-icon--titan {
+    border-color: rgba(235, 59, 90, 0.7);
+}
+
+.transfer-menu-character-icon--hunter {
+    border-color: rgba(135, 206, 250, 0.7);
+}
+
+.transfer-menu-character-icon--warlock {
+    border-color: rgba(241, 196, 15, 0.7);
+}
+
+.transfer-menu-character-icon--vault {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    border-color: rgba(150, 150, 150, 0.6);
+}
+
+/* Animation */
+.transfer-menu-container {
+    pointer-events: all;
+    animation: transferMenuFadeIn 0.15s ease-out;
+}
+
+@keyframes transferMenuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Connecting line styles */
+.transfer-menu-connector line {
+    stroke-dasharray: 4, 4;
+    animation: connectorPulse 1s ease-in-out infinite;
+}
+
+@keyframes connectorPulse {
+
+    0%,
+    100% {
+        stroke-opacity: 0.3;
+    }
+
+    50% {
+        stroke-opacity: 0.6;
+    }
+}
+
+.transfer-menu-character.active .transfer-menu-character-icon {
+    opacity: 0.4;
+    border-color: rgba(255, 255, 255, 0.2);
+    cursor: default;
+}
+
+.transfer-menu-equipped-indicator {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 14px;
+    height: 14px;
+    background: #4cd137;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 6px rgba(76, 209, 55, 0.6);
+    z-index: 2;
+}

@@ -1,0 +1,119 @@
+/* GlassCard Styles - Premium Refinement */
+
+.glass-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.glass-card--hoverable:hover {
+  transform: translateY(-2px);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-accent);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05),
+    0 0 0 1px var(--glass-border-accent);
+  /* Subtle inner glow border */
+}
+
+.glass-card--clickable {
+  cursor: pointer;
+}
+
+.glass-card--clickable:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+/* Refined Glow - Border only, no pulsing size */
+.glass-card--glowing {
+  box-shadow: 0 0 15px var(--glow-color, rgba(255, 255, 255, 0.1));
+  border-color: var(--glow-color, var(--glass-border-accent));
+}
+
+/* Exotic Card Variant - Premium Gold Border */
+.exotic-card {
+  padding: 0;
+  position: relative;
+  background: linear-gradient(145deg, rgba(20, 20, 23, 0.8), rgba(30, 30, 35, 0.9));
+}
+
+.exotic-card__border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  /* Thinner border */
+  background: linear-gradient(135deg,
+      transparent 0%,
+      var(--tier-exotic) 50%,
+      transparent 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Stat Card Variant */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.stat-card__label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.stat-card__value {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Element-specific glow colors */
+/* Using CSS Variables for dynamic coloring */
+.glass-void {
+  --glow-color: var(--energy-void);
+}
+
+.glass-solar {
+  --glow-color: var(--energy-solar);
+}
+
+.glass-arc {
+  --glow-color: var(--energy-arc);
+}
+
+.glass-stasis {
+  --glow-color: var(--energy-stasis);
+}
+
+.glass-strand {
+  --glow-color: var(--energy-strand);
+}
+
+.glass-prismatic {
+  --glow-color: var(--energy-prismatic);
+}

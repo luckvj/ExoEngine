@@ -1,0 +1,15 @@
+{
+    "short_name": "ExoEngine",
+    "name": "ExoEngine: Destiny 2 Optimizer",
+    "icons": [
+        {
+            "src": "logo_dsc.svg",
+            "type": "image/svg+xml",
+            "sizes": "any"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#0d1117",
+    "background_color": "#0d1117"
+}

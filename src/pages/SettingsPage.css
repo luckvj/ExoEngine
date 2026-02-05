@@ -1,0 +1,360 @@
+/* ExoEngine Settings Page */
+.settings-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding-top: 240px;
+    /* Space for global header - lowered further */
+}
+
+/* Sidebar Navigation */
+.settings-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 60px;
+    /* Offset from left only - top handled by container */
+    gap: 8px;
+    z-index: 10;
+}
+
+.settings-nav-btn {
+    width: 100%;
+    max-width: 240px;
+    height: 60px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.settings-nav-btn:hover {
+    background: transparent;
+    color: #fff;
+    border-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.settings-nav-btn--active {
+    background: transparent;
+    /* Light grey highlight */
+    color: #fff;
+    border-color: transparent;
+    box-shadow: none;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Active Indicator Line (Optional, decorative) */
+.settings-nav-btn--active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* Move to bottom */
+    top: auto;
+    /* Unset top */
+    right: 0;
+    /* Stretch across */
+    height: 2px;
+    /* Thin line */
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Glow effect for line */
+}
+
+
+/* Settings Row Label & Description */
+.settings-row-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.settings-row-description {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+}
+
+/* Toggle Button */
+.d2-toggle-btn {
+    min-width: 60px;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.d2-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+}
+
+.d2-toggle-btn--active {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3), inset 0 0 12px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Keybind Style */
+.d2-keybind-btn {
+    min-width: 100px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.d2-keybind-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Button Group */
+.settings-button-group {
+    display: flex;
+    gap: 8px;
+}
+
+.d2-keybind-btn--active {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3), inset 0 0 12px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Main Content Area */
+.settings-content {
+    flex: 1;
+    padding: 0 80px 40px 60px;
+    /* Top padding removed - handled by container */
+    overflow-y: auto;
+    position: relative;
+    margin-right: 40px;
+    /* Right gutter like reference */
+}
+
+/* Scrollbar styling for content */
+.settings-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.settings-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Section Sections */
+.settings-category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    margin-top: 40px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.settings-category-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 40px;
+    height: 2px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.settings-category-header:first-child {
+    margin-top: 0;
+}
+
+.settings-category-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.settings-category-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+    fill: currentColor;
+    color: white;
+}
+
+/* Rows */
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    /* Consistent height */
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 2px;
+    /* Slight gap between rows */
+    transition: background 0.2s;
+}
+
+.settings-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.settings-row-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.settings-row-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Dropdown / Selector Style */
+.d2-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 280px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 8px;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+.d2-selector:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.d2-selector-value {
+    color: #f5f5f5;
+    font-size: 14px;
+    text-align: center;
+    flex: 1;
+}
+
+.d2-selector-arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.d2-selector-arrow:hover {
+    opacity: 1;
+}
+
+.d2-arrow-left {
+    border-right: 5px solid white;
+}
+
+.d2-arrow-right {
+    border-left: 5px solid white;
+}
+
+
+
+/* Slider Style */
+.d2-slider-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 280px;
+}
+
+.d2-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    cursor: pointer;
+}
+
+.d2-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ffd700;
+    border-radius: 0;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.d2-slider-value {
+    min-width: 32px;
+    text-align: right;
+    font-family: monospace;
+    color: #ffd700;
+    font-weight: 600;
+}
+
+/* Checkbox specific to D2 (sometimes just On/Off dropdown, but box exists too) */
+.d2-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    position: relative;
+}
+
+.d2-checkbox--checked::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #fff;
+}
+
+/* Expansion Grid overrides for new layout */
+.settings-expansion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    width: 100%;
+}

@@ -1,0 +1,2710 @@
+[
+  {
+    "weapon": "Lumina",
+    "armor": "Boots of the Assembler",
+    "score": 200,
+    "reasons": [
+      "Explicit Armor Mention: Boots of the Assembler",
+      "Explicit Weapon Mention: Lumina"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Helm of Saint-14",
+    "score": 120,
+    "reasons": [
+      "Explicit Armor Mention: Helm of Saint-14",
+      "Void",
+      "Void Overshield"
+    ]
+  },
+  {
+    "weapon": "Crimson",
+    "armor": "Hazardous Propulsion",
+    "score": 110,
+    "reasons": [
+      "Explicit Weapon Mention: Crimson",
+      "Hand Cannon"
+    ]
+  },
+  {
+    "weapon": "Hawkmoon",
+    "armor": "Lucky Pants",
+    "score": 110,
+    "reasons": [
+      "Explicit Weapon Mention: Hawkmoon",
+      "Hand Cannon"
+    ]
+  },
+  {
+    "weapon": "Malfeasance",
+    "armor": "Lucky Pants",
+    "score": 110,
+    "reasons": [
+      "Explicit Weapon Mention: Malfeasance",
+      "Hand Cannon"
+    ]
+  },
+  {
+    "weapon": "Sturm",
+    "armor": "Lucky Pants",
+    "score": 110,
+    "reasons": [
+      "Explicit Weapon Mention: Sturm",
+      "Hand Cannon"
+    ]
+  },
+  {
+    "weapon": "Still Hunt",
+    "armor": "Celestial Nighthawk",
+    "score": 110,
+    "reasons": [
+      "Explicit Armor Mention: Celestial Nighthawk",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Bastion",
+    "armor": "Arbor Warden",
+    "score": 100,
+    "reasons": [
+      "Explicit Weapon Mention: Bastion"
+    ]
+  },
+  {
+    "weapon": "Lord of Wolves",
+    "armor": "Mask of Bakris",
+    "score": 100,
+    "reasons": [
+      "Explicit Weapon Mention: Lord of Wolves"
+    ]
+  },
+  {
+    "weapon": "Conditional Finality",
+    "armor": "The Path of Burning Steps",
+    "score": 40,
+    "reasons": [
+      "Solar",
+      "Stasis",
+      "Ignition",
+      "Freeze"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "The Bombardiers",
+    "score": 40,
+    "reasons": [
+      "Solar",
+      "Void",
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Chromatic Fire",
+    "score": 40,
+    "reasons": [
+      "Solar",
+      "Void",
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Raiju's Harness",
+    "score": 40,
+    "reasons": [
+      "Arc",
+      "Jolt",
+      "Amplified",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "The Bombardiers",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Slow",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "Chromatic Fire",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Slow",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "Icefall Mantle",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Slow",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Cryosthesia 77K",
+    "armor": "The Path of Burning Steps",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Slow",
+      "Freeze"
+    ]
+  },
+  {
+    "weapon": "Touch of Malice",
+    "armor": "The Bombardiers",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Blind",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Touch of Malice",
+    "armor": "Chromatic Fire",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Blind",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Apotheosis Veil",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Fr0st-EE5",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Graviton Forfeit",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Fallen Sunstar",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Heart of Inmost Light",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Mask of the Quiet One",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Orpheus Rig",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Oathkeeper",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal",
+      "Bow"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "The Path of Burning Steps",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Slow",
+      "Freeze"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Rime-Coat Raiment",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Slow",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Mask of Fealty",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Shatter",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Rime-Coat Raiment",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Slow",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Choir of One",
+    "armor": "The Bombardiers",
+    "score": 30,
+    "reasons": [
+      "Void",
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Choir of One",
+    "armor": "Chromatic Fire",
+    "score": 30,
+    "reasons": [
+      "Void",
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Collective Obligation",
+    "armor": "The Bombardiers",
+    "score": 30,
+    "reasons": [
+      "Void",
+      "Suppression",
+      "Suppress"
+    ]
+  },
+  {
+    "weapon": "Devil&#39;s Ruin",
+    "armor": "Khepri's Horn",
+    "score": 30,
+    "reasons": [
+      "Solar",
+      "Scorch",
+      "Ignition"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Graviton Forfeit",
+    "score": 30,
+    "reasons": [
+      "Void",
+      "Void Overshield",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "ACD/0 Feedback Fence",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Jolt",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "Crown of Tempests",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Jolt",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "An Insurmountable Skullfort",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Melee",
+      "Glaive"
+    ]
+  },
+  {
+    "weapon": "Edge of Intent",
+    "armor": "Karnstein Armlets",
+    "score": 30,
+    "reasons": [
+      "Cure",
+      "Restoration",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "Khepri's Horn",
+    "score": 30,
+    "reasons": [
+      "Solar",
+      "Ignition",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Apotheosis Veil",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Fr0st-EE5",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Graviton Forfeit",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Fallen Sunstar",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Heart of Inmost Light",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Mask of the Quiet One",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Orpheus Rig",
+    "score": 30,
+    "reasons": [
+      "Melee",
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Hard Light",
+    "armor": "The Bombardiers",
+    "score": 30,
+    "reasons": [
+      "Solar",
+      "Void",
+      "Arc"
+    ]
+  },
+  {
+    "weapon": "Hard Light",
+    "armor": "Chromatic Fire",
+    "score": 30,
+    "reasons": [
+      "Solar",
+      "Void",
+      "Arc"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Ballidorse Wrathweavers",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Frozen",
+      "Shatter"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Mask of Fealty",
+    "score": 30,
+    "reasons": [
+      "Stasis",
+      "Shatter",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "The Path of Burning Steps",
+    "score": 30,
+    "reasons": [
+      "Solar",
+      "Stasis",
+      "Ignition"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Blight Ranger",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Blind",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "The Bombardiers",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Blind",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Chromatic Fire",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Blind",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Crown of Tempests",
+    "score": 30,
+    "reasons": [
+      "Arc",
+      "Jolt",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ruinous Effigy",
+    "armor": "The Bombardiers",
+    "score": 30,
+    "reasons": [
+      "Void",
+      "Suppression",
+      "Suppress"
+    ]
+  },
+  {
+    "weapon": "Still Hunt",
+    "armor": "The Bombardiers",
+    "score": 30,
+    "reasons": [
+      "Solar",
+      "Suppress",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "Ballidorse Wrathweavers",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "Cadmus Ridge Lancecap",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "Hoarfrost-Z",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "Mask of Bakris",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "The Path of Burning Steps",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "Rime-Coat Raiment",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Ager&#39;s Scepter",
+    "armor": "Raiden Flux",
+    "score": 20,
+    "reasons": [
+      "Slow",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Arbalest",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Fusion Rifle",
+      "Linear Fusion Rifle"
+    ]
+  },
+  {
+    "weapon": "Arbalest",
+    "armor": "Rain of Fire",
+    "score": 20,
+    "reasons": [
+      "Fusion Rifle",
+      "Linear Fusion Rifle"
+    ]
+  },
+  {
+    "weapon": "Cerberus +1",
+    "armor": "Blastwave Striders",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Cerberus +1",
+    "armor": "Cadmus Ridge Lancecap",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Cerberus +1",
+    "armor": "Hoarfrost-Z",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Cerberus +1",
+    "armor": "Mask of Fealty",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Cerberus +1",
+    "armor": "Oathkeeper",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Cerberus +1",
+    "armor": "Rime-Coat Raiment",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Conditional Finality",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Stasis"
+    ]
+  },
+  {
+    "weapon": "Conditional Finality",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Stasis"
+    ]
+  },
+  {
+    "weapon": "Conditional Finality",
+    "armor": "Khepri's Horn",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Ignition"
+    ]
+  },
+  {
+    "weapon": "Cryosthesia 77K",
+    "armor": "Ballidorse Wrathweavers",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Frozen"
+    ]
+  },
+  {
+    "weapon": "Cryosthesia 77K",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Cryosthesia 77K",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Cryosthesia 77K",
+    "armor": "Icefall Mantle",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Cryosthesia 77K",
+    "armor": "Rime-Coat Raiment",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Euphony",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Fusion Rifle",
+      "Linear Fusion Rifle"
+    ]
+  },
+  {
+    "weapon": "Euphony",
+    "armor": "Rain of Fire",
+    "score": 20,
+    "reasons": [
+      "Fusion Rifle",
+      "Linear Fusion Rifle"
+    ]
+  },
+  {
+    "weapon": "Final Warning",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Strand",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Final Warning",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Strand",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Forerunner",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Forerunner",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Forerunner",
+    "armor": "Crown of Tempests",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Forerunner",
+    "armor": "Getaway Artist",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Forerunner",
+    "armor": "Mataiodoxía",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Forerunner",
+    "armor": "Lucky Raspberry",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Forerunner",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Forerunner",
+    "armor": "Raiden Flux",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Outbreak Perfected",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Auto Rifle",
+      "Pulse Rifle"
+    ]
+  },
+  {
+    "weapon": "Rat King",
+    "armor": "Assassin's Cowl",
+    "score": 20,
+    "reasons": [
+      "Invisibility",
+      "Invis"
+    ]
+  },
+  {
+    "weapon": "Rat King",
+    "armor": "Graviton Forfeit",
+    "score": 20,
+    "reasons": [
+      "Invisibility",
+      "Invis"
+    ]
+  },
+  {
+    "weapon": "Rat King",
+    "armor": "Gwisin Vest",
+    "score": 20,
+    "reasons": [
+      "Invisibility",
+      "Invis"
+    ]
+  },
+  {
+    "weapon": "Rat King",
+    "armor": "Gyrfalcon's Hauberk",
+    "score": 20,
+    "reasons": [
+      "Invisibility",
+      "Invis"
+    ]
+  },
+  {
+    "weapon": "Rat King",
+    "armor": "Omnioculus",
+    "score": 20,
+    "reasons": [
+      "Invisibility",
+      "Invis"
+    ]
+  },
+  {
+    "weapon": "Revision Zero",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Sniper Rifle",
+      "Pulse Rifle"
+    ]
+  },
+  {
+    "weapon": "The Navigator",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Strand",
+      "Sever"
+    ]
+  },
+  {
+    "weapon": "The Navigator",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Strand",
+      "Sever"
+    ]
+  },
+  {
+    "weapon": "Touch of Malice",
+    "armor": "Blight Ranger",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Blind"
+    ]
+  },
+  {
+    "weapon": "Touch of Malice",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Blind"
+    ]
+  },
+  {
+    "weapon": "Touch of Malice",
+    "armor": "Raiden Flux",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Arbor Warden",
+    "score": 20,
+    "reasons": [
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Crown of Tempests",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Crest of Alpha Lupi",
+    "score": 20,
+    "reasons": [
+      "Class Ability",
+      "Sidearm"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Eye of Another World",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Hallowfire Heart",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Class Ability",
+      "Sidearm"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Mataiodoxía",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Nezarec's Sin",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Traveler&#39;s Chosen",
+    "armor": "Ophidia Spathe",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Ballidorse Wrathweavers",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Frozen"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Blastwave Striders",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Cadmus Ridge Lancecap",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Hoarfrost-Z",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Icefall Mantle",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Verglas Curve",
+    "armor": "Mask of Fealty",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Ballidorse Wrathweavers",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Shatter"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Blastwave Striders",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Cadmus Ridge Lancecap",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Hoarfrost-Z",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Icefall Mantle",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "Oathkeeper",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Wicked Implement",
+    "armor": "The Path of Burning Steps",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Wish-Keeper",
+    "armor": "Deimosuffusion",
+    "score": 20,
+    "reasons": [
+      "Strand",
+      "Suspend"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Blight Ranger",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Crown of Tempests",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Doom Fang Pauldron",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Eternal Warrior",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Gwisin Vest",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Hallowfire Heart",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Mask of Bakris",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Khepri's Horn",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Nezarec's Sin",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Loreley Splendor",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Mask of the Quiet One",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Arc"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Omnioculus",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "No Backup Plans",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Promethium Spurs",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Raiden Flux",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Raiju's Harness",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Borealis",
+    "armor": "Secant Filaments",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Buried Bloodline",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Weaken"
+    ]
+  },
+  {
+    "weapon": "Buried Bloodline",
+    "armor": "Contraverse Hold",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Weaken"
+    ]
+  },
+  {
+    "weapon": "Buried Bloodline",
+    "armor": "Mask of the Quiet One",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Devour"
+    ]
+  },
+  {
+    "weapon": "Buried Bloodline",
+    "armor": "Secant Filaments",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Devour"
+    ]
+  },
+  {
+    "weapon": "Centrifuse",
+    "armor": "Blight Ranger",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Blind"
+    ]
+  },
+  {
+    "weapon": "Centrifuse",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Blind"
+    ]
+  },
+  {
+    "weapon": "Centrifuse",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Blind"
+    ]
+  },
+  {
+    "weapon": "Centrifuse",
+    "armor": "Getaway Artist",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Amplified"
+    ]
+  },
+  {
+    "weapon": "Centrifuse",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Blind"
+    ]
+  },
+  {
+    "weapon": "Centrifuse",
+    "armor": "Raiju's Harness",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Amplified"
+    ]
+  },
+  {
+    "weapon": "Choir of One",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Arc"
+    ]
+  },
+  {
+    "weapon": "Choir of One",
+    "armor": "Raiden Flux",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Coldheart",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Coldheart",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Coldheart",
+    "armor": "Raiden Flux",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Slow"
+    ]
+  },
+  {
+    "weapon": "Collective Obligation",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Weaken"
+    ]
+  },
+  {
+    "weapon": "Collective Obligation",
+    "armor": "Contraverse Hold",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Weaken"
+    ]
+  },
+  {
+    "weapon": "Collective Obligation",
+    "armor": "Gyrfalcon's Hauberk",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Volatile"
+    ]
+  },
+  {
+    "weapon": "Collective Obligation",
+    "armor": "Mask of the Quiet One",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Devour"
+    ]
+  },
+  {
+    "weapon": "Collective Obligation",
+    "armor": "Secant Filaments",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Devour"
+    ]
+  },
+  {
+    "weapon": "Delicate Tomb",
+    "armor": "ACD/0 Feedback Fence",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Delicate Tomb",
+    "armor": "Crown of Tempests",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Delicate Tomb",
+    "armor": "Gifted Conviction",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Delicate Tomb",
+    "armor": "Lucky Raspberry",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Delicate Tomb",
+    "armor": "Raiju's Harness",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Devil&#39;s Ruin",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Devil&#39;s Ruin",
+    "armor": "Caliban's Hand",
+    "score": 20,
+    "reasons": [
+      "Scorch",
+      "Ignition"
+    ]
+  },
+  {
+    "weapon": "Devil&#39;s Ruin",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Devil&#39;s Ruin",
+    "armor": "Dawn Chorus",
+    "score": 20,
+    "reasons": [
+      "Scorch",
+      "Ignition"
+    ]
+  },
+  {
+    "weapon": "Devil&#39;s Ruin",
+    "armor": "Eunoia",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Devil&#39;s Ruin",
+    "armor": "Melas Panoplia",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Firesprite"
+    ]
+  },
+  {
+    "weapon": "Devil&#39;s Ruin",
+    "armor": "The Path of Burning Steps",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Ignition"
+    ]
+  },
+  {
+    "weapon": "Divinity",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Weaken"
+    ]
+  },
+  {
+    "weapon": "Divinity",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Fusion Rifle",
+      "Trace Rifle"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Assassin's Cowl",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Fortune’s Favor",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Void Overshield"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Doom Fang Pauldron",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Gyrfalcon's Hauberk",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Void Overshield"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "An Insurmountable Skullfort",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Glaive"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Nezarec's Sin",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Mask of the Quiet One",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Void Overshield"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "Omnioculus",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Action",
+    "armor": "No Backup Plans",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Void Overshield"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "Dunemarchers",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "Gifted Conviction",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "Liar's Handshake",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "Mataiodoxía",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "Lucky Raspberry",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Edge of Concurrence",
+    "armor": "Raiju's Harness",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Edge of Intent",
+    "armor": "Hallowfire Heart",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Intent",
+    "armor": "An Insurmountable Skullfort",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Glaive"
+    ]
+  },
+  {
+    "weapon": "Edge of Intent",
+    "armor": "Melas Panoplia",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Edge of Intent",
+    "armor": "Promethium Spurs",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Cure"
+    ]
+  },
+  {
+    "weapon": "Edge of Intent",
+    "armor": "Ophidia Spathe",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "Celestial Nighthawk",
+    "score": 20,
+    "reasons": [
+      "Ignition",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "Dawn Chorus",
+    "score": 20,
+    "reasons": [
+      "Ignition",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "Hallowfire Heart",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "Loreley Splendor",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "Promethium Spurs",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Eriana&#39;s Vow",
+    "armor": "The Path of Burning Steps",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Ignition"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Crown of Tempests",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Getaway Artist",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Mataiodoxía",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Lucky Raspberry",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Arbor Warden",
+    "score": 20,
+    "reasons": [
+      "Grenade",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Crown of Tempests",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Crest of Alpha Lupi",
+    "score": 20,
+    "reasons": [
+      "Class Ability",
+      "Sword"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Eye of Another World",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Hallowfire Heart",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Mataiodoxía",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Nezarec's Sin",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Ergo Sum",
+    "armor": "Ophidia Spathe",
+    "score": 20,
+    "reasons": [
+      "Melee",
+      "Class Ability"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Stasis"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Stasis"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "Blastwave Striders",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "Cadmus Ridge Lancecap",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "Hoarfrost-Z",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "Mask of Bakris",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Stasis"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "Mask of Fealty",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "Oathkeeper",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Graviton Spike",
+    "armor": "Rime-Coat Raiment",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Hard Light",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Arc"
+    ]
+  },
+  {
+    "weapon": "Hierarchy of Needs",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Arc"
+    ]
+  },
+  {
+    "weapon": "Hierarchy of Needs",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Arc"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Stasis"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Stasis"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Blastwave Striders",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Cadmus Ridge Lancecap",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Hoarfrost-Z",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Khepri's Horn",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Ignition"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Oathkeeper",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Ice Breaker",
+    "armor": "Rime-Coat Raiment",
+    "score": 20,
+    "reasons": [
+      "Stasis",
+      "Stasis Crystal"
+    ]
+  },
+  {
+    "weapon": "Le Monarque",
+    "armor": "Oathkeeper",
+    "score": 20,
+    "reasons": [
+      "Poison",
+      "Bow"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "ACD/0 Feedback Fence",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Cuirass of the Falling Star",
+    "score": 20,
+    "reasons": [
+      "Amplified",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Gifted Conviction",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Eternal Warrior",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Pulse Rifle",
+      "Trace Rifle"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Getaway Artist",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Amplified"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Lucky Raspberry",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Jolt"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Mask of Bakris",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Mothkeeper’s Wraps",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Blind"
+    ]
+  },
+  {
+    "weapon": "Lodestar",
+    "armor": "Raiden Flux",
+    "score": 20,
+    "reasons": [
+      "Arc",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Lord of Wolves",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Lord of Wolves",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Lord of Wolves",
+    "armor": "Eunoia",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Lord of Wolves",
+    "armor": "Khepri's Horn",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Lorentz Driver",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Fusion Rifle",
+      "Linear Fusion Rifle"
+    ]
+  },
+  {
+    "weapon": "Lorentz Driver",
+    "armor": "Rain of Fire",
+    "score": 20,
+    "reasons": [
+      "Fusion Rifle",
+      "Linear Fusion Rifle"
+    ]
+  },
+  {
+    "weapon": "Polaris Lance",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Polaris Lance",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Polaris Lance",
+    "armor": "Eunoia",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Polaris Lance",
+    "armor": "Khepri's Horn",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Prometheus Lens",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Prometheus Lens",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Prometheus Lens",
+    "armor": "Eunoia",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Prometheus Lens",
+    "armor": "Khepri's Horn",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Red Death Reformed",
+    "armor": "Hallowfire Heart",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Grenade"
+    ]
+  },
+  {
+    "weapon": "Red Death Reformed",
+    "armor": "Hazardous Propulsion",
+    "score": 20,
+    "reasons": [
+      "Auto Rifle",
+      "Pulse Rifle"
+    ]
+  },
+  {
+    "weapon": "Red Death Reformed",
+    "armor": "Karnstein Armlets",
+    "score": 20,
+    "reasons": [
+      "Cure",
+      "Restoration"
+    ]
+  },
+  {
+    "weapon": "Red Death Reformed",
+    "armor": "Promethium Spurs",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Cure"
+    ]
+  },
+  {
+    "weapon": "Ruinous Effigy",
+    "armor": "Assassin's Cowl",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Ruinous Effigy",
+    "armor": "Doom Fang Pauldron",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Ruinous Effigy",
+    "armor": "Graviton Forfeit",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Ruinous Effigy",
+    "armor": "Gyrfalcon's Hauberk",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Volatile"
+    ]
+  },
+  {
+    "weapon": "Ruinous Effigy",
+    "armor": "Nezarec's Sin",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Ruinous Effigy",
+    "armor": "Mask of the Quiet One",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Ruinous Effigy",
+    "armor": "Omnioculus",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Melee"
+    ]
+  },
+  {
+    "weapon": "Slayer&#39;s Fang",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Weaken"
+    ]
+  },
+  {
+    "weapon": "Slayer&#39;s Fang",
+    "armor": "Contraverse Hold",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Weaken"
+    ]
+  },
+  {
+    "weapon": "Slayer&#39;s Fang",
+    "armor": "No Backup Plans",
+    "score": 20,
+    "reasons": [
+      "Void",
+      "Shotgun"
+    ]
+  },
+  {
+    "weapon": "Still Hunt",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Still Hunt",
+    "armor": "Hallowfire Heart",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Still Hunt",
+    "armor": "Khepri's Horn",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Still Hunt",
+    "armor": "Loreley Splendor",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Still Hunt",
+    "armor": "Promethium Spurs",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Super"
+    ]
+  },
+  {
+    "weapon": "Sunshot",
+    "armor": "The Bombardiers",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Sunshot",
+    "armor": "Chromatic Fire",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Sunshot",
+    "armor": "Eunoia",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  },
+  {
+    "weapon": "Sunshot",
+    "armor": "Khepri's Horn",
+    "score": 20,
+    "reasons": [
+      "Solar",
+      "Scorch"
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+Contact: https://github.com/Luckvj/exoengine/security/advisories/new
+Expires: 2027-01-24T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://exoengine.online/.well-known/security.txt
+
+# Security Policy for ExoEngine™
+#
+# If you discover a security vulnerability in ExoEngine, please report it
+# responsibly through our GitHub Security Advisories page.
+#
+# We take all security reports seriously and will respond within 48 hours.
+#
+# Please include:
+# - Description of the vulnerability
+# - Steps to reproduce
+# - Potential impact
+# - Suggested fix (if any)
+#
+# DO NOT:
+# - Publicly disclose the vulnerability before we've had a chance to address it
+# - Exploit the vulnerability beyond proof-of-concept testing
+# - Access or modify data that doesn't belong to you
+#
+# Thank you for helping keep ExoEngine and its users safe!
+
+Policy: https://github.com/Luckvj/exoengine/blob/main/SECURITY.md
+Acknowledgments: https://github.com/Luckvj/exoengine/blob/main/SECURITY.md#hall-of-fame

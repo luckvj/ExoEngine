@@ -1,0 +1,425 @@
+/* Braytech-style profile emblem banner - FULL WIDTH STRETCH */
+.emblem-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  overflow: visible !important;
+  container-type: inline-size;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  margin-top: -12px;
+}
+
+/* Mobile: Adjust layout */
+@media (max-width: 768px) {
+  .emblem-banner {
+    padding-left: 70px;
+    /* Shift content right to make room for logo */
+  }
+}
+
+@media (max-width: 480px) {
+  .emblem-banner {
+    padding-left: 60px;
+  }
+}
+
+/* Layer 1: Base Texture (SecondarySpecial) */
+.emblem-banner__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 0%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  z-index: 0;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+}
+
+/* Layer 2: Emblem Logo - Responsive Positioning */
+.emblem-banner__logo {
+  width: 125px;
+  height: 125px;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.9));
+  position: absolute;
+  left: -160px;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+/* Make logo clickable when handler is provided */
+.emblem-banner__logo[role="button"] {
+  cursor: pointer;
+}
+
+.emblem-banner__logo[role="button"]:hover {
+  transform: translateY(-50%) scale(1.1);
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.95)) brightness(1.1);
+}
+
+.emblem-banner__logo[role="button"]:active {
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Mobile: Adjust logo size and position */
+@media (max-width: 1024px) {
+  .emblem-banner__logo {
+    width: 100px;
+    height: 100px;
+    left: -120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .emblem-banner__logo {
+    width: 70px;
+    height: 70px;
+    left: 5px;
+    top: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .emblem-banner__logo {
+    width: 55px;
+    height: 55px;
+    left: 5px;
+  }
+}
+
+/* Mobile: Hide or simplify complex content */
+@media (max-width: 768px) {
+  .emblem-banner__comms-section {
+    display: none;
+  }
+
+  .emblem-banner__settings-wrap {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .emblem-banner__content {
+    padding: 12px 20px 0 4cqw;
+  }
+}
+
+@media (max-width: 480px) {
+  .emblem-banner__identity-info {
+    gap: 8px;
+  }
+
+  .emblem-banner__name {
+    font-size: 16px;
+  }
+
+  .emblem-banner__stat {
+    gap: 4px;
+  }
+
+  .emblem-banner__stat-value {
+    font-size: 13px;
+  }
+}
+
+.emblem-banner__content {
+  position: relative;
+  z-index: 30;
+  height: 100%;
+  width: 100%;
+  padding: 12px 4cqw 0 4cqw;
+  margin: 0;
+  overflow: visible;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 0px;
+}
+
+/* Player identity block */
+.emblem-banner__identity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 180px;
+  position: relative;
+  overflow: visible;
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 0;
+  transform: translateY(0px);
+}
+
+.emblem-banner__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.emblem-banner__name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Identity Header (Name + Top Stats) */
+.emblem-banner__identity-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 0px;
+}
+
+.emblem-banner__identity-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.emblem-banner__stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.9;
+}
+
+.emblem-banner__stat-icon {
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+}
+
+.emblem-banner__stat-value {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.emblem-banner__stat-rank-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 2px;
+}
+
+.emblem-banner__rank-ornament {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 215, 0, 0.4);
+}
+
+.emblem-banner__stat-rank-number {
+  background-color: #ffffff;
+  color: #000000;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  z-index: 10;
+  font-family: 'Outfit', sans-serif;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Comms. Section */
+.emblem-banner__comms-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  margin-top: -6px;
+  padding-right: 20px;
+  transform: translateY(4px);
+}
+
+.emblem-banner__comms-row-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.emblem-banner__comms-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.emblem-banner__comms-line {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.emblem-banner__comms-stats-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 2px;
+  align-items: center;
+}
+
+.emblem-banner__comm-stat-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.emblem-banner__comm-stat-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.emblem-banner__comm-stat-value {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Segmented Bar - Full Width Stretch */
+.emblem-banner__comm-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0;
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.emblem-banner__comm-segment-row {
+  display: flex;
+  height: 4px;
+  width: 100%;
+  gap: 1px;
+}
+
+.emblem-banner__comm-segment--ally {
+  background-color: #3fb690;
+}
+
+.emblem-banner__comm-segment--mastery {
+  background-color: #e38d2a;
+}
+
+.emblem-banner__comm-segment--fun {
+  background-color: #d15266;
+}
+
+.emblem-banner__comm-segment--leadership {
+  background-color: #4daedb;
+}
+
+/* Breakdown Section */
+.emblem-banner__breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+.emblem-banner__breakdown-grid {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.emblem-banner__breakdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 0;
+}
+
+.emblem-banner__comms-section:hover .emblem-banner__breakdown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.emblem-banner__breakdown-box {
+  padding: 6px 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  border-top: 2px solid transparent;
+  width: 100%;
+  text-align: center;
+}
+
+.emblem-banner__breakdown-box--ally {
+  border-color: #3fb690;
+  background: rgba(63, 182, 144, 0.1);
+}
+
+.emblem-banner__breakdown-box--mastery {
+  border-color: #e38d2a;
+  background: rgba(227, 141, 42, 0.1);
+}
+
+.emblem-banner__breakdown-box--fun {
+  border-color: #d15266;
+  background: rgba(209, 82, 102, 0.1);
+}
+
+.emblem-banner__breakdown-box--leadership {
+  border-color: #4daedb;
+  background: rgba(77, 174, 219, 0.1);
+}
+
+/* Navigation Container (injected via children) */
+.emblem-banner__actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 0;
+  margin-left: auto;
+  z-index: 50;
+  height: 100%;
+  transform: translateY(2px);
+  /* Moved up from 8px for micro-adjustment */
+}

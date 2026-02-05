@@ -1,0 +1,150 @@
+/* Legal Pages - Clean Black Background Design */
+.legal-page {
+    min-height: 100vh;
+    background: #000000;
+    color: #ffffff;
+    padding: 4rem 2rem;
+}
+
+.legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-page h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.legal-last-updated {
+    font-size: 0.875rem;
+    color: #808080;
+    margin: 0 0 3rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+.legal-section {
+    margin-bottom: 3rem;
+}
+
+.legal-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+}
+
+.legal-section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+    color: #ffffff;
+}
+
+.legal-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 0 1rem 0;
+    color: #ffffff;
+}
+
+.legal-section ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    list-style: disc;
+}
+
+.legal-section li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.legal-section li strong {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.legal-section p strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.legal-section a {
+    color: #7fdbff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.legal-section a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Disclaimer Section */
+.legal-disclaimer {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legal-disclaimer p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.legal-disclaimer strong {
+    color: #ffffff;
+}
+
+/* Back Button */
+.legal-back-button {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.legal-back-button:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .legal-page {
+        padding: 2rem 1rem;
+    }
+
+    .legal-page h1 {
+        font-size: 2rem;
+    }
+
+    .legal-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .legal-section h3 {
+        font-size: 1rem;
+    }
+
+    .legal-section p,
+    .legal-section li {
+        font-size: 0.9375rem;
+    }
+}

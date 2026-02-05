@@ -1,0 +1,715 @@
+/* Mobile View Mode - Complete Redesign for Touch Interfaces */
+
+/* ============================================
+   GLOBAL MOBILE FOUNDATION
+   ============================================ */
+
+.mobile-view {
+  font-size: 16px;
+  /* Comfortable reading size */
+  overflow-x: hidden;
+}
+
+.mobile-view * {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Prevent zoom on input focus */
+.mobile-view input,
+.mobile-view select,
+.mobile-view textarea {
+  font-size: 16px;
+}
+
+/* Remove unnecessary animations for better performance */
+.mobile-view * {
+  transition-duration: 0.15s !important;
+}
+
+/* Make everything scrollable and spacious */
+.mobile-view {
+  --mobile-spacing-xs: 8px;
+  --mobile-spacing-sm: 12px;
+  --mobile-spacing-md: 16px;
+  --mobile-spacing-lg: 24px;
+  --mobile-spacing-xl: 32px;
+}
+
+/* ============================================
+   CHARACTER SCREEN - MOBILE REDESIGN
+   ============================================ */
+
+.mobile-view .character-screen {
+  display: flex;
+  flex-direction: column;
+  padding: 120px var(--mobile-spacing-md) var(--mobile-spacing-xl) var(--mobile-spacing-md);
+  gap: var(--mobile-spacing-lg);
+  height: auto;
+  overflow-y: auto;
+  align-items: stretch;
+}
+
+/* Character Model - Top Section */
+.mobile-view .character-screen__center {
+  width: 100%;
+  max-height: 40vh;
+  min-height: 300px;
+  order: 1;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.mobile-view .character-model-glow {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Stats Section */
+.mobile-view .character-screen__stats-column {
+  order: 2;
+  width: 100%;
+  padding: var(--mobile-spacing-md);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.mobile-view .stat-bar {
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+/* Gear Sections - Card-based Layout */
+.mobile-view .character-screen__column {
+  width: 100%;
+  padding: 0;
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-spacing-md);
+}
+
+.mobile-view .character-screen__column--left {
+  order: 3;
+}
+
+.mobile-view .character-screen__column--right {
+  order: 5;
+}
+
+/* Weapons get special treatment - horizontal layout with proper spacing */
+.mobile-view .slot-group--weapons {
+  order: 4;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--mobile-spacing-md);
+  padding: var(--mobile-spacing-md);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.mobile-view .slot-group--weapons .gear-slot {
+  position: relative;
+  flex-shrink: 0;
+  width: var(--item-icon-size) !important;
+  height: var(--item-icon-size) !important;
+}
+
+/* Armor slots - horizontal row */
+.mobile-view .slot-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--mobile-spacing-sm);
+  justify-content: center;
+  width: 100%;
+  padding: var(--mobile-spacing-md);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+.mobile-view .slot-group .gear-slot {
+  width: var(--item-icon-size);
+  height: var(--item-icon-size);
+}
+
+/* ============================================
+   INVENTORY - MOBILE REDESIGN
+   ============================================ */
+
+.mobile-view .inventory-section {
+  padding: var(--mobile-spacing-md);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.mobile-view .inventory-header {
+  padding: var(--mobile-spacing-sm) 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: var(--mobile-spacing-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Inventory Grid - 3 columns on mobile for better use of space */
+.mobile-view .inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--mobile-spacing-sm);
+  padding: var(--mobile-spacing-sm);
+  width: 100%;
+  justify-items: center;
+}
+
+/* Ensure inventory items are touchable */
+.mobile-view .inventory-cell,
+.mobile-view .gear-slot {
+  width: var(--item-icon-size);
+  height: var(--item-icon-size);
+  min-width: 80px;
+  min-height: 80px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Inventory Panels */
+.mobile-view .inventory-panel {
+  width: 100%;
+  max-width: none;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.mobile-view .inventory-panels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-spacing-md);
+  width: 100%;
+  padding: var(--mobile-spacing-md);
+}
+
+/* ============================================
+   SYNERGY PANEL - MOBILE REDESIGN
+   ============================================ */
+
+.mobile-view .synergy-panel {
+  padding: var(--mobile-spacing-md);
+  width: 100%;
+}
+
+.mobile-view .synergy-database {
+  width: 100%;
+  max-width: none;
+  padding: var(--mobile-spacing-md);
+}
+
+/* Single column for synergy cards on mobile */
+.mobile-view .synergy-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-spacing-md);
+  width: 100%;
+}
+
+.mobile-view .synergy-card {
+  padding: var(--mobile-spacing-md);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subclass Section - Organized with clear sections */
+.mobile-view .subclass-section {
+  padding: var(--mobile-spacing-md);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.mobile-view .subclass-header {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: var(--mobile-spacing-md);
+  padding-bottom: var(--mobile-spacing-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subclass Grid - 4 items per row with proper sizing */
+.mobile-view .subclass-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--mobile-spacing-sm);
+  justify-items: center;
+  width: 100%;
+}
+
+.mobile-view .subclass-grid .gear-slot,
+.mobile-view .subclass-grid .inventory-cell,
+.mobile-view .subclass-grid .subclass-item {
+  width: var(--item-icon-size) !important;
+  height: var(--item-icon-size) !important;
+  min-width: var(--item-icon-size);
+  min-height: var(--item-icon-size);
+}
+
+/* Fragments and Abilities - 4 per row, organized */
+.mobile-view .fragments-grid,
+.mobile-view .abilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--mobile-spacing-sm);
+  width: 100%;
+  justify-items: center;
+  margin-top: var(--mobile-spacing-sm);
+}
+
+.mobile-view .fragments-grid .gear-slot,
+.mobile-view .fragments-grid .inventory-cell,
+.mobile-view .abilities-grid .gear-slot,
+.mobile-view .abilities-grid .inventory-cell {
+  width: var(--item-icon-size) !important;
+  height: var(--item-icon-size) !important;
+}
+
+.mobile-view .aspect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--mobile-spacing-sm);
+  justify-items: center;
+  width: 100%;
+  margin-top: var(--mobile-spacing-sm);
+}
+
+.mobile-view .aspect-grid .gear-slot,
+.mobile-view .aspect-grid .inventory-cell {
+  width: var(--item-icon-size) !important;
+  height: var(--item-icon-size) !important;
+}
+
+/* Section labels for clarity */
+.mobile-view .fragments-label,
+.mobile-view .abilities-label,
+.mobile-view .aspect-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: var(--mobile-spacing-md);
+  margin-bottom: var(--mobile-spacing-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   BUILDER PAGE - MOBILE REDESIGN
+   ============================================ */
+
+.mobile-view .builder-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 80px;
+}
+
+.mobile-view .builder-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--mobile-spacing-md);
+}
+
+.mobile-view .builder-main {
+  width: 100%;
+  padding: var(--mobile-spacing-md);
+  order: 1;
+}
+
+.mobile-view .builder-sidebar {
+  width: 100%;
+  position: relative;
+  height: auto;
+  order: 2;
+  max-height: none;
+  padding: var(--mobile-spacing-md);
+}
+
+/* Character Screen within Builder */
+.mobile-view .builder-character-screen {
+  width: 100%;
+  padding: var(--mobile-spacing-md);
+  margin-bottom: var(--mobile-spacing-lg);
+}
+
+/* Settings Page Mobile */
+.mobile-view .settings-container {
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.mobile-view .settings-sidebar {
+  width: 100%;
+  flex-direction: row;
+  padding: 12px;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.mobile-view .settings-nav-btn {
+  flex: 1;
+  min-width: 120px;
+  font-size: 12px;
+  height: 48px;
+}
+
+.mobile-view .settings-content {
+  width: 100%;
+  padding: 16px;
+}
+
+.mobile-view .settings-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.mobile-view .settings-row-control {
+  width: 100%;
+}
+
+.mobile-view .settings-button-group {
+  width: 100%;
+}
+
+.mobile-view .settings-button-group button {
+  flex: 1;
+}
+
+/* ============================================
+   LOADOUT DISPLAY - MOBILE REDESIGN
+   ============================================ */
+
+.mobile-view .loadout-display {
+  padding: var(--mobile-spacing-md);
+  width: 100%;
+}
+
+.mobile-view .loadout-section {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: var(--mobile-spacing-md);
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.mobile-view .loadout-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: var(--mobile-spacing-md);
+  padding-bottom: var(--mobile-spacing-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subclass - Horizontal scrollable row */
+.mobile-view .subclass-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--mobile-spacing-sm);
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: var(--mobile-spacing-xs);
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-view .subclass-abilities {
+  display: flex;
+  flex-direction: row;
+  gap: var(--mobile-spacing-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Armor - Each piece in its own row */
+.mobile-view .armor-slot-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-spacing-md);
+  width: 100%;
+}
+
+.mobile-view .armor-item-col {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--mobile-spacing-md);
+  padding: var(--mobile-spacing-sm);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+.mobile-view .armor-item-col .loadout-item {
+  flex-shrink: 0;
+}
+
+.mobile-view .armor-item-col .item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Weapons - Vertical stack */
+.mobile-view .weapons-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-spacing-md);
+}
+
+.mobile-view .weapon-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--mobile-spacing-md);
+  padding: var(--mobile-spacing-sm);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+/* Rich Tooltip - Adjust for mobile */
+.mobile-view .rich-tooltip {
+  max-width: 90vw;
+  font-size: 13px;
+}
+
+/* ============================================
+   NAVIGATION & HEADER - MOBILE REDESIGN
+   ============================================ */
+
+.mobile-view .layout__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-view .global-header {
+  padding: var(--mobile-spacing-sm) var(--mobile-spacing-md);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.mobile-view .header-nav {
+  display: flex;
+  gap: var(--mobile-spacing-xs);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.mobile-view .header-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-view .header-nav-btn {
+  padding: var(--mobile-spacing-sm) var(--mobile-spacing-md);
+  font-size: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-height: 44px;
+}
+
+/* Reduce margins and padding globally */
+.mobile-view h1 {
+  font-size: 1.5rem;
+}
+
+.mobile-view h2 {
+  font-size: 1.25rem;
+}
+
+.mobile-view h3 {
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   TOUCH INTERACTIONS & BUTTONS
+   ============================================ */
+
+/* Touch-friendly buttons */
+.mobile-view button,
+.mobile-view .d2-keybind-btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: var(--mobile-spacing-sm) var(--mobile-spacing-md);
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+  touch-action: manipulation;
+}
+
+/* Touch action for gear slots */
+.mobile-view .gear-slot,
+.mobile-view .inventory-cell {
+  touch-action: manipulation;
+}
+
+.mobile-view .gear-slot img,
+.mobile-view .inventory-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Fix damage type icons - keep them at proper size */
+.mobile-view .gear-slot__damage-icon,
+.mobile-view .inventory-cell__damage-icon {
+  width: calc(14px * var(--image-size-multiplier)) !important;
+  height: calc(14px * var(--image-size-multiplier)) !important;
+}
+
+/* Ensure power badges don't get oversized */
+.mobile-view .gear-slot__light,
+.mobile-view .inventory-cell__badge {
+  padding: calc(2px * var(--image-size-multiplier)) calc(6px * var(--image-size-multiplier));
+  gap: calc(4px * var(--image-size-multiplier));
+}
+
+/* Keep tier stars at proper size */
+.mobile-view .tier-badge__star {
+  width: calc(10px * var(--image-size-multiplier)) !important;
+  height: calc(10px * var(--image-size-multiplier)) !important;
+}
+
+/* Synergy items - touch friendly */
+.mobile-view .synergy-item {
+  min-height: 44px;
+  padding: var(--mobile-spacing-sm);
+  touch-action: manipulation;
+}
+
+/* Stats Display */
+.mobile-view .stat-bar,
+.mobile-view .stat-row {
+  width: 100%;
+  padding: var(--mobile-spacing-xs) 0;
+}
+
+/* ============================================
+   FLYOUTS & MODALS
+   ============================================ */
+
+/* Flyout Panels - Fullscreen on mobile */
+.mobile-view .inventory-flyout,
+.mobile-view .vault-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.mobile-view .inventory-flyout-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--mobile-spacing-lg);
+  padding-top: 60px;
+}
+
+/* Close button for flyouts */
+.mobile-view .flyout-close-btn {
+  position: fixed;
+  top: var(--mobile-spacing-md);
+  right: var(--mobile-spacing-md);
+  z-index: 10000;
+  min-height: 44px;
+  min-width: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   SCROLLABLE CONTENT & PERFORMANCE
+   ============================================ */
+
+/* Smooth scrolling containers */
+.mobile-view .inventory-grid,
+.mobile-view .synergy-grid,
+.mobile-view .character-screen {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent overscroll bounce on containers */
+.mobile-view .builder-page,
+.mobile-view .character-screen,
+.mobile-view .settings-container {
+  overscroll-behavior: contain;
+}
+
+/* Better scrollbar for mobile */
+.mobile-view ::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.mobile-view ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.mobile-view ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+/* ============================================
+   ACCESSIBILITY & FINAL TOUCHES
+   ============================================ */
+
+/* Prevent text selection on interactive elements */
+.mobile-view .gear-slot,
+.mobile-view .inventory-cell,
+.mobile-view button,
+.mobile-view .synergy-card {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Active state feedback */
+.mobile-view .gear-slot:active,
+.mobile-view .inventory-cell:active,
+.mobile-view button:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+/* Ensure safe areas on notched devices */
+.mobile-view .character-screen,
+.mobile-view .builder-page {
+  padding-left: max(var(--mobile-spacing-md), env(safe-area-inset-left));
+  padding-right: max(var(--mobile-spacing-md), env(safe-area-inset-right));
+  padding-bottom: max(var(--mobile-spacing-xl), env(safe-area-inset-bottom));
+}

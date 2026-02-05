@@ -1,0 +1,232 @@
+.screen-tabs-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+    padding-right: 0;
+    transition: all 0.3s ease;
+    height: 100%;
+    /* Fill parent height to align bottom */
+    align-items: flex-end;
+    /* Align tabs to bottom */
+}
+
+/* Mobile: Adjust tabs layout */
+@media (max-width: 1024px) {
+    .screen-tabs-container {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .screen-tabs-container {
+        padding-right: 0;
+        justify-content: center;
+        /* Center tabs on mobile */
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        /* Add semi-transparent BG on mobile for visibility */
+        backdrop-filter: blur(8px);
+        margin-top: 60px;
+        /* Push down on mobile to clear identity */
+    }
+}
+
+@media (max-width: 480px) {
+    .screen-tabs-container {
+        padding-right: 0;
+    }
+}
+
+.screen-tabs {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: gap 0.3s ease;
+}
+
+/* Mobile Scrollable Tabs override */
+.layout.mode-mobile .screen-tabs {
+    gap: 16px;
+    padding-right: 20px;
+    /* Space for last item */
+    margin-left: 0;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.layout.mode-mobile .screen-tabs::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* Mobile: Reduce gaps */
+@media (max-width: 768px) {
+    .screen-tabs {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .screen-tabs {
+        gap: 8px;
+    }
+}
+
+.screen-tabs__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    transition: gap 0.3s ease;
+}
+
+/* Mobile: Smaller gaps and scrollable if needed */
+@media (max-width: 768px) {
+    .screen-tabs__list {
+        gap: 16px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0 8px;
+    }
+
+    .screen-tabs__list::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .screen-tabs__list {
+        gap: 8px;
+    }
+}
+
+.screen-tab {
+    background: transparent;
+    border: none;
+    padding: 8px 12px 2px 12px;
+    /* Reduced top padding from 12px to 8px to move text up */
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: flex-end;
+    /* Align text to bottom of button */
+    justify-content: center;
+    outline: none !important;
+    padding-bottom: 0px !important;
+    /* Force flush bottom */
+}
+
+/* Mobile Hit Area Increase */
+.layout.mode-mobile .screen-tab {
+    padding: 12px 16px 0px 16px;
+    flex-shrink: 0;
+    /* Prevent shrinking in scroll view */
+}
+
+.screen-tab:hover {
+    background: transparent;
+}
+
+.screen-tab:focus,
+.screen-tab:focus-visible,
+.screen-tab:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.screen-tab__label {
+    font-family: var(--font-text, sans-serif);
+    font-size: 16px;
+    /* Increased from 14px */
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.2s ease, font-size 0.3s ease;
+}
+
+/* Mobile: Smaller font */
+@media (max-width: 768px) {
+    .screen-tab__label {
+        font-size: 12px;
+        letter-spacing: 0.05em;
+    }
+}
+
+@media (max-width: 480px) {
+    .screen-tab__label {
+        font-size: 11px;
+    }
+}
+
+.screen-tab:hover .screen-tab__label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.screen-tab.is-active .screen-tab__label {
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Glowing active underline */
+.screen-tab.is-active {
+    background: transparent;
+}
+
+.screen-tab.is-active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    /* Moved down "more" */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Thin line */
+    background: #ffffff;
+    /* Upward white aura */
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.8),
+        /* Bright core glow */
+        0 -15px 20px rgba(255, 255, 255, 0.4);
+    /* Soft upward aura reaching the text */
+}
+
+/* Ensure last tab isn't cut off */
+.screen-tab:last-child {
+    margin-right: 24px;
+}
+
+.screen-tabs__arrow-button {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.screen-tabs__arrow-button:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.arrow-key {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+}

@@ -1,0 +1,190 @@
+/* SUCCESS: BLUE (Digital Construction) */
+@keyframes transmat-construct-blue {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+        filter: brightness(2) blur(4px) hue-rotate(180deg);
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+
+    10% {
+        opacity: 1;
+        clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
+    }
+
+    40% {
+        transform: scale(1.1) translateY(0);
+        filter: brightness(1.5) blur(0px) hue-rotate(0deg);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(1);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes transmat-glow-blue {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes transmat-beam-blue {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+
+/* FAILURE: RED (Glitch) */
+@keyframes transmat-error-glitch {
+    0% {
+        transform: translate(0);
+        filter: hue-rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-4px, 4px) skewX(10deg);
+        filter: hue-rotate(90deg);
+    }
+
+    40% {
+        transform: translate(-4px, -4px) skewX(-10deg);
+    }
+
+    60% {
+        transform: translate(4px, 4px);
+        filter: hue-rotate(270deg);
+    }
+
+    80% {
+        transform: translate(4px, -4px) skewX(5deg);
+    }
+
+    100% {
+        transform: translate(0);
+        filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes transmat-glow-red {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.3);
+    }
+}
+
+.transmat-equip {
+    animation: transmat-construct-blue 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    z-index: 50 !important;
+}
+
+.transmat-equip>.transmat-overlay {
+    display: block;
+    position: absolute;
+    inset: -10px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.transmat-equip>.transmat-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0, 163, 255, 0.4) 0%, transparent 70%);
+    z-index: 25;
+    animation: transmat-glow-blue 0.6s ease-out;
+}
+
+/* Global Centered Transmat Overlay */
+.global-transmat-container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 2000000010 !important;
+    /* Sufficiently above synergy-blackout (2B) and synergy-web (2B+5) to stay on top */
+}
+
+.global-transmat-beam {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #00A3FF, #fff, #00A3FF, transparent);
+    box-shadow: 0 0 30px #00A3FF, 0 0 60px rgba(0, 163, 255, 0.5);
+    opacity: 0;
+}
+
+.global-transmat--success .global-transmat-beam {
+    animation: transmat-beam-blue 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.global-transmat-flash {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 163, 255, 0.8) 0%, transparent 70%);
+    opacity: 0;
+}
+
+.global-transmat--success .global-transmat-flash {
+    animation: transmat-glow-blue 1s ease-out forwards;
+}
+
+/* 
+.global-transmat--failure .global-transmat-flash {
+    background: radial-gradient(circle, rgba(255, 50, 50, 0.8) 0%, transparent 70%);
+    animation: transmat-error-glitch 0.5s infinite;
+    opacity: 1;
+}
+*/
+
+/* 
+.transfer-failed,
+.transmat-equip-fail {
+    animation: transmat-error-glitch 0.6s infinite;
+}
+
+.transfer-failed>.transmat-overlay::after,
+.transmat-equip-fail>.transmat-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 50, 50, 0.6) 0%, transparent 70%);
+    z-index: 25;
+    animation: transmat-glow-red 0.4s ease-out infinite;
+}
+*/
