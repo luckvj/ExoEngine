@@ -5,13 +5,12 @@ import { VaultCard } from '../components/vault/VaultCard';
 import { QuestSidebar } from '../components/synergy/QuestSidebar';
 import { useSettingsStore, useProfileStore, useSavedBuildsStore } from '../store';
 import { buildService } from '../services/build.service';
-import { loadoutLinkService } from '../services/bungie/loadout-link.service';
 import { useToast } from '../components/common/Toast';
 import { errorLog } from '../utils/logger';
 import { getSubclassElement } from '../utils/character-helpers';
 import './LoadoutVaultPage.css';
 
-type FilterElement = ElementType | 'all';
+// type FilterElement = ElementType | 'all';
 type FilterClass = GuardianClass | 'all';
 
 const LoadoutVaultPage = () => {
@@ -52,9 +51,9 @@ const LoadoutVaultPage = () => {
   const currentTheme = elementColors[subclassElement] || elementColors.void;
 
   const toggleElement = (element: ElementType) => {
-    setSelectedElements(prev => 
-      prev.includes(element) 
-        ? prev.filter(e => e !== element) 
+    setSelectedElements(prev =>
+      prev.includes(element)
+        ? prev.filter(e => e !== element)
         : [...prev, element]
     );
   };
@@ -118,12 +117,12 @@ const LoadoutVaultPage = () => {
       const result = await buildService.equip(build.template, selectedCharacterId, (step: string, progress: number) => {
         setEquippingStatus(step);
         setEquippingProgress(progress);
-        
+
         // Navigate to Galaxy view right before equipping phase (after transfers complete)
         // This lets users see the exotic items flying to the character in real-time
         if (step.includes('Equipping items') || progress >= 35) {
           navigate('/galaxy');
-          
+
           // Automatically trigger "Return to Orbit" (ESC) after navigation
           // This resets the camera to the default centered view showing equipped items
           setTimeout(() => {
@@ -197,7 +196,7 @@ const LoadoutVaultPage = () => {
             marginBottom: 'var(--space-md)'
           }}
         >
-          <span className="spin-button__text">Generate Build</span>
+          <span className="spin-button__text">Generate Build <span style={{ fontSize: '0.75em', opacity: 0.7 }}>(Beta)</span></span>
         </button>
 
         {/* Header */}
@@ -224,7 +223,7 @@ const LoadoutVaultPage = () => {
             <button
               className="btn btn-secondary"
               onClick={() => {
-                setSelectedElement('all');
+                setSelectedElements(Object.values(ElementType));
                 setSelectedClass('all');
                 setSearchQuery('');
               }}

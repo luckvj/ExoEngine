@@ -7,6 +7,8 @@ import { useSettingsStore, useAuthStore, useProfileStore } from '../store';
 import { profileLoader } from '../services/bungie/profile.service';
 import { ConfirmationModal } from '../components/common/ConfirmationModal';
 
+import { errorLog } from '../utils/logger';
+
 import './SettingsPage.css';
 
 // Simple Icon Components (SVGs) - Removed unused Icons constant
@@ -20,6 +22,18 @@ export function SettingsPage() {
   const [clearing, setClearing] = useState(false);
   const [syncing, setSyncing] = useState(false);
   const [manifestVersion, setManifestVersion] = useState<string>('7.3.0.1');
+
+  const {
+    maxSynergies, setMaxSynergies,
+    organizedGalaxy, toggleOrganizedGalaxy,
+    performanceMode, setPerformanceMode,
+    customCursor, toggleCustomCursor,
+    showFps, toggleShowFps,
+    immersiveMode, toggleImmersiveMode
+  } = useSettingsStore();
+  const { logout } = useAuthStore();
+  const { setLoading } = useProfileStore();
+
   const [confirmModal, setConfirmModal] = useState<{
     isOpen: boolean;
     title: string;
@@ -33,14 +47,6 @@ export function SettingsPage() {
     onConfirm: () => { },
     type: 'info'
   });
-
-  const {
-    maxSynergies, setMaxSynergies,
-    organizedGalaxy, toggleOrganizedGalaxy,
-    performanceMode, setPerformanceMode
-  } = useSettingsStore();
-  const { logout } = useAuthStore();
-  const { setLoading } = useProfileStore();
 
   // Load manifest version on mount
   useEffect(() => {
@@ -108,8 +114,8 @@ export function SettingsPage() {
     try {
       setLoading(true);
       // Force a fresh profile fetch
-      const membership = useAuthStore.getState().membership;
-      if (membership) {
+      const currentMembership = useAuthStore.getState().membership;
+      if (currentMembership) {
         await profileLoader.loadProfile(true);
         toast.success('Profile synced successfully');
       }
@@ -191,6 +197,8 @@ export function SettingsPage() {
               <div className="settings-row-control">
                 <div className="d2-slider-container">
                   <input
+                    id="max-synergies-slider"
+                    name="max-synergies-slider"
                     type="range"
                     min="5"
                     max="100"
@@ -218,6 +226,52 @@ export function SettingsPage() {
                 </button>
               </div>
             </div>
+
+            <div className="settings-row">
+              <div>
+                <span className="settings-row-label">Immersive Mode</span>
+                <span className="settings-row-description">Adds parallax and drift effects for a "flying through space" feel</span>
+              </div>
+              <div className="settings-row-control">
+                <button
+                  className={`d2-toggle-btn ${immersiveMode ? 'd2-toggle-btn--active' : ''}`}
+                  onClick={toggleImmersiveMode}
+                >
+                  {immersiveMode ? 'ON' : 'OFF'}
+                </button>
+              </div>
+            </div>
+
+            <div className="settings-row">
+              <div>
+                <span className="settings-row-label">Custom Destiny Cursor</span>
+                <span className="settings-row-description">Toggle the Destiny-themed custom cursor</span>
+              </div>
+              <div className="settings-row-control">
+                <button
+                  className={`d2-toggle-btn ${customCursor ? 'd2-toggle-btn--active' : ''}`}
+                  onClick={toggleCustomCursor}
+                >
+                  {customCursor ? 'ON' : 'OFF'}
+                </button>
+              </div>
+            </div>
+
+            <div className="settings-row">
+              <div>
+                <span className="settings-row-label">Show FPS Counter</span>
+                <span className="settings-row-description">Display performance metrics in the bottom-left corner</span>
+              </div>
+              <div className="settings-row-control">
+                <button
+                  className={`d2-toggle-btn ${showFps ? 'd2-toggle-btn--active' : ''}`}
+                  onClick={toggleShowFps}
+                >
+                  {showFps ? 'ON' : 'OFF'}
+                </button>
+              </div>
+            </div>
+
             <div className="settings-row">
               <div>
                 <span className="settings-row-label">Performance Mode</span>
@@ -398,7 +452,7 @@ export function SettingsPage() {
                 <span className="settings-row-description">Current application version</span>
               </div>
               <div className="settings-row-control">
-                <span className="settings-row-label">1.0</span>
+                <span className="settings-row-label">{APP_VERSION}</span>
               </div>
             </div>
 

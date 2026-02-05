@@ -135,37 +135,61 @@ API:          Bungie.net + DIM Mappings
 ## Usage Guide
 
 ### First Time Setup
-1. Visit https://exoengine.online (or your deployed instance)
-2. Click "Connect to Bungie.net" and authorize
-3. Wait for your vault to sync (~5-10 seconds)
-4. You're in! Your entire arsenal is now a 3D galaxy
+1. Visit **https://exoengine.online**
+2. Click "Connect to Bungie.net" and authorize with your Bungie account
+3. Select your character
+4. Wait for your vault to sync (~5-10 seconds)
+5. You're in! Access features from the navigation menu
 
-### Navigating the Galaxy
-- **Mouse:** Drag to rotate, scroll to zoom
-- **Touch:** Swipe to rotate, pinch to zoom
-- **Click Node:** See item details and synergies
-- **Double-Click:** Auto-equip the item
-- **ESC:** Reset camera view
+### Using Agent Wake (Text Commands)
+1. Navigate to "Agent Wake" from the menu
+2. Type natural language commands:
+   - `equip sunshot and sunbracers`
+   - `void hunter with omnioculus`
+   - `solar titan with loreley`
+3. Press Enter or click the command button
+4. ExoEngine handles all transfers and equipping automatically
 
-### Equipping a Synergy Build
-1. Click any exotic armor in the galaxy
-2. View the synergy sidebar on the right
-3. Click a synergy card
-4. ExoEngine auto-equips: Exotic + Subclass + Aspects + Fragments + Mods
+### Using Synergy Galaxy (3D View)
+1. Navigate to "Galaxy" from the menu
+2. Your vault loads as a 3D space
+3. **Click** any node to see item details
+4. **Double-click** to equip items
+5. **Drag** to rotate the view
+6. **Scroll** to zoom in/out
+7. Use synergy sidebar to equip full builds
 
-### Saving a Build
-1. Equip your desired loadout
-2. Go to "Tactical Vault" tab
+### Using Build Generator
+1. Navigate to "Generator" from the menu
+2. Click "Spin" to generate a random build
+3. Use filters to narrow by class or element
+4. Click "Lock" on slots you want to keep
+5. Click "Equip Build" to apply the loadout
+
+### Saving Builds
+1. Equip your desired loadout in-game
+2. Navigate to "Saved Builds" or "Loadout Vault"
 3. Click "Capture Current Loadout"
-4. Name it and save!
+4. Name your build and save
+5. Re-equip saved builds anytime with one click
 
 ---
 
-## Known Limitations
+## Known Limitations & Beta Features
 
-- **Error 1663:** Subclass changes only work in Orbit/Social spaces (Bungie API restriction)
+### Bungie API Restrictions
+- **Error 1663:** Subclass changes only work in Orbit/Social spaces (Bungie limitation)
 - **Error 1676:** Some mod combinations fail due to energy cost limits
-- **Mobile Performance:** Galaxy may lag on older mobile devices (optimization ongoing)
+- **Socket Changes:** Aspects and fragments can only be modified outside of activities
+
+### Beta Features
+- **Synergy Galaxy:** 3D visualization is experimental and under active development
+- **Build Generator:** Template library is being expanded with more exotic combinations
+- **Mobile Support:** Galaxy navigation may be limited on mobile devices
+
+### Performance Notes
+- Large vaults (500+ items) may take longer to load in Galaxy view
+- First-time manifest download can take 30-60 seconds
 
 ---
 

@@ -1,8 +1,8 @@
 
-import { useEffect, useState, useRef } from 'react';
-import { debugLog } from '../utils/logger';
+import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
+import { debugLog, errorLog } from '../utils/logger';
 import { useNavigate } from 'react-router-dom';
-import { useAuthStore, useProfileStore } from '../store';
+import { useAuthStore, useProfileStore, useToastStore } from '../store';
 import { bungieApi } from '../services/bungie/api-client';
 import { BUNGIE_CONFIG } from '../config/bungie.config';
 import { GuardianClass } from '../types';
@@ -47,16 +47,22 @@ export function CharacterSelectPage() {
     const loginButtonRef = useRef<HTMLButtonElement>(null);
     const travelerRef = useRef<HTMLImageElement>(null);
 
+    // Tooltip mouse tracking
+    const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+
+    // OPTIMIZATION: Memoize login logos array length
+    const loginLogosLength = useMemo(() => loginLogos.length, []);
+
     useEffect(() => {
         // Only cycle when not authenticated
         if (isAuthenticated) return;
 
         const interval = setInterval(() => {
-            setLoginLogoIndex((prev) => (prev + 1) % loginLogos.length);
+            setLoginLogoIndex((prev) => (prev + 1) % loginLogosLength);
         }, 3000); // Cycle every 3 seconds
 
         return () => clearInterval(interval);
-    }, [isAuthenticated]);
+    }, [isAuthenticated, loginLogosLength]);
 
     useEffect(() => {
         // Check auth status on mount if not already done
@@ -77,12 +83,16 @@ export function CharacterSelectPage() {
         checkAuth();
     }, [isAuthenticated]);
 
-    const handleMouseMove = (e: React.MouseEvent) => {
+    // OPTIMIZATION: Memoize parallax handler
+    const handleMouseMove = useCallback((e: React.MouseEvent) => {
         // Calculate normalized position from center (-0.5 to 0.5)
         const x = (e.clientX / window.innerWidth) - 0.5;
         const y = (e.clientY / window.innerHeight) - 0.5;
         setParallax({ x, y });
-    };
+
+        // Update tooltip position to follow mouse
+        setTooltipPos({ x: e.clientX, y: e.clientY });
+    }, []);
 
     const handleCharacterSelect = (characterId: string) => {
         setSelectedCharacter(characterId);
@@ -116,8 +126,16 @@ export function CharacterSelectPage() {
     };
 
     const handleLogin = async () => {
-        const url = await bungieApi.getAuthorizationUrl();
-        window.location.href = url;
+        try {
+            const url = await bungieApi.getAuthorizationUrl();
+            window.location.href = url;
+        } catch (err) {
+            errorLog('Auth', 'Failed to initiate login:', err);
+            useToastStore.getState().addToast({
+                message: 'Failed to connect to Bungie. Check your connection.',
+                type: 'error'
+            });
+        }
     };
 
     const renderClassLogo = () => {
@@ -164,12 +182,12 @@ export function CharacterSelectPage() {
                 <img ref={travelerRef} src={travelerSphere} className="traveler-sphere" alt="" />
                 {/* Only show logo on login screen, hide when selecting characters */}
                 {!isAuthenticated && (
-                    <div 
-                        className="brand-logo-beside-traveler" 
+                    <div
+                        className="brand-logo-beside-traveler"
                         onClick={(e) => {
                             e.stopPropagation();
                             navigate('/credits');
-                        }} 
+                        }}
                         style={{ cursor: 'pointer' }}
                         role="button"
                         tabIndex={0}
@@ -237,11 +255,10 @@ export function CharacterSelectPage() {
 
                             {isLoginHovered && (
                                 <div style={{
-                                    position: 'absolute',
-                                    right: '100%',
-                                    top: '50%',
-                                    transform: 'translateY(-50%)',
-                                    marginRight: '30px',
+                                    position: 'fixed',
+                                    left: `${tooltipPos.x}px`,
+                                    top: `${tooltipPos.y}px`,
+                                    transform: 'translate(-50%, -50%)',
                                     zIndex: 2000,
                                     pointerEvents: 'none'
                                 }}>
@@ -310,10 +327,10 @@ export function CharacterSelectPage() {
 
                                         {hoveredCharId === char.characterId && (
                                             <div style={{
-                                                position: 'absolute',
-                                                right: '102%',
-                                                top: '50%',
-                                                transform: 'translateY(-50%)',
+                                                position: 'fixed',
+                                                left: `${tooltipPos.x}px`,
+                                                top: `${tooltipPos.y}px`,
+                                                transform: 'translate(-50%, -50%)',
                                                 zIndex: 2000,
                                                 pointerEvents: 'none'
                                             }}>
